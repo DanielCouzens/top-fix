@@ -1,0 +1,138 @@
+.pseudo-header {
+  height: 90px;
+}
+
+// Base Colours
+$grey4op: #2f2f2fe6;
+$grey4: #2f2f2f;
+$grey3: #454545;
+$grey2op:#acaba7b6;
+$grey2: #acaba7;
+$grey1: #f2f1f1;
+$grey0: #fcfbfb;
+$red3: #c53c46;
+$red2: #d36c73;
+$red1: #e09ba0;
+$red0: #eecbce;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+.layout {
+  overflow-x: hidden;
+}
+
+// Font Settings
+h1 {
+  font-size: 3.5rem;
+}
+
+h1,
+h2,
+h3 {
+  position: relative;
+  color: $grey3;
+
+  b {
+    font-size: inherit;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+textarea,
+input,
+label,
+button,
+b,
+a,
+p {
+  font-size: 1.8rem;
+  color: $grey3;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+// Shadow
+@mixin bx-shadow {
+  box-shadow: 3px 4px 15px 2px #00000035;
+}
+
+// Layout
+@mixin page-break {
+  margin: 6rem auto;
+  width: 70%;
+  height: 1px;
+  background-color: $grey2op;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Buttons
+@mixin button-large {
+  width: 210px;
+  @include center;
+  background-color: $red3;
+  padding: 19px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include bx-shadow;
+  transition: 300ms background-color, 300ms box-shadow;
+
+  p {
+    color: $white;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+
+@mixin button-small {
+  border: none;
+  z-index: 1000;
+  @include center;
+  width: 122px;
+  background-color: $red3;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  @include bx-shadow;
+  transition: 300ms background-color, 300ms box-shadow;
+
+  p {
+    color: $white;
+    font-weight: 700;
+  }
+}
+
+@mixin button-hover {
+  background-color: $red2;
+}
+
+@mixin red-line {
+  position: absolute;
+  margin-left: 12px;
+  content: "";
+  height: 6px;
+  width: 30px;
+  background-color: $red3;
+}

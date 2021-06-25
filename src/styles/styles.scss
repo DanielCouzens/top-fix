@@ -1,0 +1,15 @@
+// Global
+@import "./base-styles/base.scss";
+
+// Components
+@import "./components-styles/header.scss";
+@import "./components-styles/footer.scss";
+@import "./components-styles/page-nav.scss";
+@import "./components-styles/carousel.scss";
+
+// Pages
+@import "./pages-styles/home.scss";
+@import "./pages-styles/contact.scss";
+@import "./pages-styles/services.scss";
+@import "./pages-styles/case-studies.scss";
+@import "./pages-styles/case-study.scss";

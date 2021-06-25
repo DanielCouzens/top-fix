@@ -1,0 +1,90 @@
+.services-wrap {
+  .background {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1500px) {
+      background-size: contain;
+    }
+  }
+
+  .page-wrap {
+    .testing {
+      height: 200px;
+      transition: box-shadow 10s ease;
+
+      &[data-active="true"] {
+        @include bx-shadow;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 6rem;
+    }
+
+    h1:after {
+      @include red-line;
+      top: 23px;
+    }
+  }
+
+  .page-break {
+    @include page-break;
+    margin: 3rem auto;
+  }
+
+  .services {
+    display: flex;
+    margin: 3rem 0;
+
+    .service {
+      width: 50%;
+      padding: 1.8rem;
+      margin: auto;
+
+      h2 {
+        margin-bottom: 1.8rem;
+      }
+
+      h3 {
+        margin-top: 1.8rem;
+      }
+
+      h2:after {
+        @include red-line;
+        top: 14px;
+      }
+
+      .gatsby-image-wrapper {
+        @include bx-shadow;
+      }
+
+      ul {
+        margin-top: 1.8rem;
+        margin-left: 2rem;
+
+        li::marker {
+          font-size: 20px;
+        }
+
+        li {
+          a {
+            color: $red3;
+            transition: color 200ms;
+            cursor: pointer;
+
+            &:hover {
+              color: $grey4;
+            }
+          }
+        }
+      }
+    }
+  }
+}

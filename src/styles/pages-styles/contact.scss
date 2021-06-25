@@ -1,0 +1,95 @@
+.contact-page-wrap {
+    margin-top: -3px;
+
+    iframe {
+        width: 100vw;
+
+
+    }
+
+    .contact-form {
+
+        p {
+            max-width: 850px;
+            margin: 50px auto;
+        }
+
+        form {
+            max-width: 850px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .contact-inputs {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 50px;
+                grid-row-gap: 20px;
+
+                label {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                    @include bx-shadow;
+                    width: 100%;
+                    height: 50px;
+                }
+            }
+
+            .message-form {
+                margin-top: 20px;
+
+                label {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                textarea {
+                    min-height: 350px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    @include bx-shadow;
+                }
+            }
+
+            .form-buttons {
+                margin-top: 30px;
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    padding: 10px 50px;
+                    @include button-small;
+                    height: 50px;
+                    width: 150px;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        left: 18px;
+                        font-size: 1.8rem;
+                    }
+                }
+
+                button:after {
+                    right: 15px;
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    background-image: url(../images/icons/right-chevron.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

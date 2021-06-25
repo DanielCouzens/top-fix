@@ -1,0 +1,28 @@
+.page-nav {
+  height: 60px;
+  @include bx-shadow;
+  @include center;
+
+  .page-nav-wrap {
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    a {
+      font-size: 12px;
+      display: block;
+      margin: 0.9rem;
+    }
+
+    a:nth-child(1) {
+      margin-left: 0;
+    }
+
+    a:nth-child(8) {
+      margin-right: 0;
+    }
+  }
+
+
+}
