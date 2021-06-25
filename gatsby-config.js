@@ -5,6 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "topfix",
+    siteUrl: "https://www.topfix-interiors.co.uk/",
+    author: "Net Frontier",
   },
   flags: {
     THE_FLAG: false,
