@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import Aos from "aos";
+import "../../node_modules/aos/dist/aos.css";
 
 const Carousel = () => {
   const data = useStaticQuery(graphql`
@@ -10,7 +12,11 @@ const Carousel = () => {
           node {
             caseStudiesTitle
             caseStudiesMainPhoto {
-              gatsbyImageData(layout: CONSTRAINED, aspectRatio: 0.7)
+              gatsbyImageData(
+                layout: CONSTRAINED
+                aspectRatio: 0.7
+                placeholder: NONE
+              )
             }
             caseStudiesText {
               raw
@@ -22,7 +28,7 @@ const Carousel = () => {
   `);
   const slides = data.allContentfulCaseStudies.edges;
   const [index, setIndex] = useState(0);
-  const delay = 3500;
+  const delay = 5000;
   const timeoutRef = useRef(null);
 
   function resetTimeout() {
@@ -44,10 +50,16 @@ const Carousel = () => {
       resetTimeout();
     };
   }, [index]);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="carousel">
-      <h2>Case Studies</h2>
+      <h2 data-aos="fade-left">Case Studies</h2>
       <div
+        data-aos="fade-up"
         className="carousel-images"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
         {slides.map((edge) => {

@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import { GatsbyImage } from "gatsby-plugin-image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PageNav from "../components/PageNav";
 import Carousel from "../components/Carousel";
 import Aos from "aos";
 import "../../node_modules/aos/dist/aos.css";
@@ -25,7 +26,7 @@ export const query = graphql`
       }
       caseStudiesSlider {
         gatsbyImageData(
-          aspectRatio: 2.9
+          aspectRatio: 2.7
           layout: FULL_WIDTH
           cropFocus: BOTTOM
           quality: 100
@@ -145,7 +146,8 @@ function CaseStudy({ data }) {
           <button
             onClick={() => setGalleryState(!galleryState)}
             onKeyDown={() => setGalleryState(!galleryState)}>
-            <img src={close} width="15" height="15" alt="close box icon" />
+            <img src={close} width="15" height="15" alt="close box icon" />{" "}
+            <span>Close Gallery</span>
           </button>
           {caseStudiesGallery.slice(0, 16).map((image) => (
             <GatsbyImage
@@ -155,7 +157,7 @@ function CaseStudy({ data }) {
             />
           ))}
         </div>
-        <section className="page-break"></section>
+        <PageNav />
         <Carousel />
       </div>
     </Layout>

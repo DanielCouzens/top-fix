@@ -1,7 +1,9 @@
 .page-nav {
+  z-index: 10000;
   height: 60px;
   @include bx-shadow;
   @include center;
+  background-color: #fff;
 
   .page-nav-wrap {
     max-width: 1200px;
@@ -10,9 +12,16 @@
     justify-content: space-between;
 
     a {
-      font-size: 12px;
       display: block;
       margin: 0.9rem;
+      transition: 300ms;
+      padding: 2px;
+
+      &:hover {
+        color: $red3;
+        // background-color: $grey1;
+        @include bx-shadow
+      }
     }
 
     a:nth-child(1) {
@@ -23,6 +32,5 @@
       margin-right: 0;
     }
   }
-
 
 }

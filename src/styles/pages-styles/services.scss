@@ -61,6 +61,10 @@
         top: 14px;
       }
 
+      p {
+        margin-top: 1rem;
+      }
+
       .gatsby-image-wrapper {
         @include bx-shadow;
       }
@@ -68,12 +72,15 @@
       ul {
         margin-top: 1.8rem;
         margin-left: 2rem;
+        display: flex;
 
         li::marker {
           font-size: 20px;
         }
 
         li {
+          margin-left: 32px;
+
           a {
             color: $red3;
             transition: color 200ms;
@@ -83,6 +90,10 @@
               color: $grey4;
             }
           }
+        }
+
+        li:nth-child(1) {
+          margin-left: 0;
         }
       }
     }

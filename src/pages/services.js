@@ -6,6 +6,7 @@ import { INLINES } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import Aos from "aos";
 import "../../node_modules/aos/dist/aos.css";
+import Accreditations from "../components/Accreditations";
 
 export const pageQuery = graphql`
   query MyQuery {
@@ -203,6 +204,8 @@ const Services = ({ data }) => {
                 renderRichText(hygienicWallLining, options)}
             </div>
           </div>
+          <div className="page-break"></div>
+          <Accreditations />
         </div>
       </div>
     </Layout>

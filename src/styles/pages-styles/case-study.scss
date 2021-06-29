@@ -1,4 +1,5 @@
 .case-wrap {
+
   .page-break {
     @include page-break;
   }
@@ -6,15 +7,11 @@
   .case-background {
     z-index: -1;
     width: 100%;
-    height: 100%;
+    height: 160%;
     position: absolute;
     background-image: url(../images/background.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (max-width: 1500px) {
-      background-size: contain;
-    }
+    background-size: contain;
   }
 
   .case-study-container {
@@ -31,15 +28,15 @@
 
     .description {
       width: 100%;
-      max-width: 1030px;
-      padding: 3rem 3rem 0rem;
+      max-width: 1130px;
+      padding: 3rem 3rem 3rem;
     }
 
     .case-study-page {
       padding: 0 3rem;
       position: relative;
       width: 100%;
-      max-width: 1030px;
+      max-width: 1130px;
       @include center;
       justify-content: space-between;
 
@@ -237,11 +234,17 @@
   }
 
   .show-gallery {
+    transform: translate(0px);
+    opacity: 1;
+    transition: 500ms;
+    z-index: 100;
     position: absolute;
-    top: 90px;
-    z-index: 90;
+    top: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.8rem;
+    background-color: #fff;
+    padding: 1.8rem;
 
     @media (max-width: 1000px) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -256,13 +259,20 @@
     }
 
     button {
-      z-index: 2000;
-      position: fixed;
-      top: 190px;
-      right: 100px;
+      z-index: 100;
+      position: absolute;
+      top: 36px;
+      right: 36px;
       background-color: $red3;
       padding: 10px 12px;
       @include bx-shadow;
+
+      span {
+        font-size: 1.8rem;
+        color: $white;
+        padding-left: 10px;
+        padding-right: 2px;
+      }
 
       img {}
     }
@@ -270,22 +280,5 @@
 
   .hide-gallery {
     display: none;
-    //   position: absolute;
-    //   animation-name: conceal;
-    //   transform: translateX(0);
-    //   animation-duration: 400ms;
-    //   animation-fill-mode: forwards;
-    //   animation-timing-function: ease-in-out;
-
-    //   @keyframes conceal {
-    //     0% {
-    //       transform: translateX(0);
-    //     }
-
-    //     100% {
-    //       transform: translateX(+100vh);
-    //     }
-    //   }
-    // }
   }
 }

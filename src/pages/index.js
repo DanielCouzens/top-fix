@@ -7,6 +7,7 @@ import topFix from "../images/top-fix.svg";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import Slider from "react-slick";
 import Carousel from "../components/Carousel";
+import Accreditations from "../components/Accreditations";
 import Aos from "aos";
 import "../../node_modules/aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
@@ -15,11 +16,6 @@ import "slick-carousel/slick/slick-theme.css";
 export const pageQuery = graphql`
   query {
     contentfulHomePage {
-      accreditations {
-        gatsbyImageData(layout: CONSTRAINED, quality: 100, height: 50)
-        id
-        title
-      }
       title
       sliderTitle
       slides {
@@ -56,11 +52,11 @@ const IndexPage = ({ data }) => {
   const {
     title,
     text,
-    accreditations,
     workWithUsImage,
     workWithUsTitle,
     workWithUs,
   } = data.contentfulHomePage;
+
   const slider = data.contentfulHomePage;
 
   useEffect(() => {
@@ -111,23 +107,8 @@ const IndexPage = ({ data }) => {
           <section className="page-break"></section>
           <Carousel />
           <section className="page-break"></section>
-
-          <section className="main-text">
-            <div className="accreditations" data-aos="fade-up">
-              <h2 data-aos="fade-up">Accreditations</h2>
-              <div className="accreditations-logo" data-aos="fade-left">
-                {accreditations.map((img) => (
-                  <GatsbyImage
-                    image={img.gatsbyImageData}
-                    alt={img.title}
-                    key={img.id}
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
+          <Accreditations />
           <section className="page-break"></section>
-          {/* <Slidershow /> */}
           <section className="work-with-us-wrap">
             <div className="work-with-us-image" data-aos="fade-up">
               <GatsbyImage

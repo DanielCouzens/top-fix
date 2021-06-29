@@ -117,25 +117,6 @@
         height: 100%;
       }
     }
-
-    .accreditations {
-      margin-bottom: 0rem;
-      @include center;
-      flex-direction: column;
-
-      h2::after {
-        top: 15px;
-        @include red-line;
-      }
-
-      .accreditations-logo {
-        width: 70vw;
-        max-width: 1200px;
-        margin: 6rem 0 0;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
   }
 
   .work-with-us-wrap {
