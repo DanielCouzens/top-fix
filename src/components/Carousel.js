@@ -26,6 +26,7 @@ const Carousel = () => {
       }
     }
   `);
+
   const slides = data.allContentfulCaseStudies.edges;
   const [index, setIndex] = useState(0);
   const delay = 5000;
@@ -52,7 +53,7 @@ const Carousel = () => {
   }, [index]);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 3000, once: true });
   }, []);
 
   return (

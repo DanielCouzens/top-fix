@@ -3,8 +3,6 @@ import Layout from "../components/Layout";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Aos from "aos";
-import "../../node_modules/aos/dist/aos.css";
 
 const CaseStudies = () => {
   const data = useStaticQuery(graphql`
@@ -25,14 +23,10 @@ const CaseStudies = () => {
     }
   `);
 
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   return (
     <Layout>
       <div className="cases-studies-gallery-container">
-        <div className="case-studies-gallery" data-aos="fade-up">
+        <div className="case-studies-gallery">
           {data.allContentfulCaseStudies.edges.map((edge) => {
             return (
               <Link

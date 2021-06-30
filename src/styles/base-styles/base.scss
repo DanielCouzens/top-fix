@@ -30,7 +30,7 @@ $white: #fff;
 
 // Font Settings
 h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 h1,
@@ -92,7 +92,7 @@ button {
   width: 210px;
   @include center;
   background-color: $red3;
-  padding: 19px;
+  padding: 16px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -125,7 +125,7 @@ button {
 }
 
 @mixin button-hover {
-  background-color: $red2;
+  background-color: $grey3;
 }
 
 @mixin red-line {

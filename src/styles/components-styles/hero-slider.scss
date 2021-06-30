@@ -1,0 +1,50 @@
+.hero-slider {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+
+
+
+    .hero-images {
+        white-space: nowrap;
+
+        .hero-image {
+            width: 100vw;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    .slider-buttons {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 25px;
+        left: calc(50% - 450px);
+
+        .hero-title {
+            background-color: $white;
+            padding: 1px 5px;
+            margin-right: 25px;
+            @include bx-shadow;
+
+            h1 {
+                margin: 1rem;
+            }
+
+            @include center;
+        }
+
+        .button-large {
+            @include button-large;
+
+            &:hover {
+                @include button-hover
+            }
+        }
+
+        .button-large:last-child {
+            margin-left: 25px;
+        }
+    }
+}

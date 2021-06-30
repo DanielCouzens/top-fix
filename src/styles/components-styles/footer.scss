@@ -1,7 +1,9 @@
 .footer {
+  // height: 800px;
+  // background-image: linear-gradient(to right, $grey2, $grey3);
   background-color: $grey3;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -30,11 +32,13 @@
       .footer-nav {
         display: flex;
         flex-direction: column;
+
         a {
           color: #fff;
           position: relative;
           margin-left: 1.5rem;
         }
+
         a:before {
           position: absolute;
           content: "";

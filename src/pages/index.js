@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import topFix from "../images/top-fix.svg";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import Hero from "../components/HeroSlider";
 import Slider from "react-slick";
 import Carousel from "../components/Carousel";
 import Accreditations from "../components/Accreditations";
@@ -40,13 +41,13 @@ export const pageQuery = graphql`
   }
 `;
 
-const hero = {
-  speed: 1000,
-  fade: true,
-  infinite: true,
-  autoplay: true,
-  dots: false,
-};
+// const hero = {
+//   speed: 1000,
+//   fade: true,
+//   infinite: true,
+//   autoplay: true,
+//   dots: false,
+// };
 
 const IndexPage = ({ data }) => {
   const {
@@ -60,13 +61,13 @@ const IndexPage = ({ data }) => {
   const slider = data.contentfulHomePage;
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 2000, once: true });
   }, []);
 
   return (
     <Layout>
-      <div className="slider-wrap">
-        <Slider {...hero} className="overflow-hidden">
+      <Hero />
+      {/* <Slider {...hero} className="overflow-hidden">
           {slider.slides.map((image) => (
             <GatsbyImage
               image={image.gatsbyImageData}
@@ -74,20 +75,8 @@ const IndexPage = ({ data }) => {
               key={image.id}
             />
           ))}
-        </Slider>
-        <div className="slider-buttons" data-aos="fade-up">
-          <div className="hero-title">
-            <h1>{slider.sliderTitle}</h1>
-          </div>
+        </Slider> */}
 
-          <Link to="/case-studies" className="button-large">
-            <p>Case Studies</p>
-          </Link>
-          <Link to="/contact" className="button-large">
-            <p>Contact Us</p>
-          </Link>
-        </div>
-      </div>
       <PageNav />
       <div className="wrap">
         <div className="background"></div>
