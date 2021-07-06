@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import Logo from "../images/Topfix-Logo.png";
 import Email from "../images/icons/email.svg";
 import Phone from "../images/icons/phone-call.svg";
-import Linked from "../images/icons/linked-in-logo-of-two-letters.svg";
+import Linked from "../images/icons/linkedin.svg";
 
 const Header = () => {
   return (

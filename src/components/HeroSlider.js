@@ -8,13 +8,7 @@ const HeroSlider = () => {
         title
         sliderTitle
         slides {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            # cropFocus: BOTTOM
-            # placeholder: BLURRED
-            quality: 100
-            aspectRatio: 2.33
-          )
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
           id
           title
         }
@@ -24,6 +18,7 @@ const HeroSlider = () => {
 
   const slides = data.contentfulHomePage.slides;
   const sliderTitle = data.contentfulHomePage.sliderTitle;
+
   const [index, setIndex] = useState(0);
   const delay = 5000;
   const timeoutRef = useRef(null);

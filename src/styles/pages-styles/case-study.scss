@@ -67,16 +67,11 @@
       .case-study-text-wrap {
         h1 {
           margin-bottom: 3rem;
-        }
 
-        h1::after {
-          bottom: 16px;
-          @include red-line;
-
-          @media (max-width: 750px) {
-            bottom: -1.8rem;
+          &::after {
+            bottom: -15px;
             left: 0;
-            margin-left: 0;
+            @include red-line;
           }
         }
 

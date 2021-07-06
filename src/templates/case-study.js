@@ -26,7 +26,7 @@ export const query = graphql`
       }
       caseStudiesSlider {
         gatsbyImageData(
-          aspectRatio: 2.7
+          aspectRatio: 2.33
           layout: FULL_WIDTH
           cropFocus: BOTTOM
           quality: 100

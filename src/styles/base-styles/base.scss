@@ -1,20 +1,26 @@
-.pseudo-header {
-  height: 90px;
-}
-
 // Base Colours
 $grey4op: #2f2f2fe6;
 $grey4: #2f2f2f;
 $grey3: #454545;
-$grey2op:#acaba748;
+$grey2op: #acaba748;
 $grey2: #acaba7;
 $grey1: #f2f1f1;
 $grey0: #fcfbfb;
+
+// Red Colours
 $red3: #c53c46;
 $red2: #d36c73;
 $red1: #e09ba0;
 $red0: #eecbce;
 $white: #fff;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.pseudo-header {
+  height: 90px;
+}
 
 * {
   margin: 0;
@@ -22,10 +28,6 @@ $white: #fff;
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: "Lato", sans-serif;
-}
-
-.layout {
-  overflow-x: hidden;
 }
 
 // Font Settings
@@ -73,12 +75,16 @@ button {
   box-shadow: 3px 4px 15px 2px #00000035;
 }
 
+@mixin bx-shadow-light {
+  box-shadow: 15px 15px 15px 2px #00000017;
+}
+
 // Layout
 @mixin page-break {
   margin: 6rem auto;
   width: 70%;
   height: 1px;
-  background-color: $grey2op;
+  background-color: $grey2;
 }
 
 @mixin center {
@@ -130,9 +136,21 @@ button {
 
 @mixin red-line {
   position: absolute;
-  margin-left: 12px;
   content: "";
   height: 6px;
   width: 30px;
   background-color: $red3;
+}
+
+@mixin big-red-line {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 70px;
+  background-color: $red3;
+}
+
+.layout {
+  overflow-x: hidden;
+  // position: relative;
 }

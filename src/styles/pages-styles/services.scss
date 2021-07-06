@@ -1,111 +1,87 @@
 .services-wrap {
-  .background {
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: url(../images/background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (max-width: 1500px) {
-      background-size: contain;
-    }
-  }
-
-  .page-wrap {
-    .testing {
-      height: 200px;
-      transition: box-shadow 10s ease;
-
-      &[data-active="true"] {
-        @include bx-shadow;
-      }
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 6rem;
-    }
-
-    h1:after {
-      @include red-line;
-      top: 23px;
-    }
-  }
-
-  .page-break {
-    @include page-break;
-    margin: 9rem auto;
     position: relative;
 
-    .bars-wrap {
-      background-color: $white;
-      position: absolute;
-      left: calc(50% - 20px);
-      top: -25px;
-      padding-left: 1.8rem;
-      padding-right: 1.8rem;
+    .background {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(../images/background.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
-  }
+}
 
-  .services {
-    display: flex;
-    margin: 3rem 0;
+.page-wrap {
+    .page-break {
+        margin: 10rem auto;
 
-    .service {
-      width: 50%;
-      padding: 1.8rem;
-      margin: auto;
-
-      h2 {
-        margin-bottom: 1.8rem;
-      }
-
-      h3 {
-        margin-top: 1.8rem;
-      }
-
-      h2:after {
-        @include red-line;
-        top: 14px;
-      }
-
-      p {
-        margin-top: 1rem;
-      }
-
-      .gatsby-image-wrapper {
-        @include bx-shadow;
-      }
-
-      ul {
-        margin-top: 1.8rem;
-        margin-left: 2rem;
-        display: flex;
-
-        li::marker {
-          font-size: 20px;
+        .bars-wrap {
+            position: absolute;
+            left: calc(50% - 75px);
+            bottom: -25px;
+            background-color: #fff;
+            padding: 0 50px;
         }
+    }
 
-        li {
-          margin-left: 32px;
+    .services {
+        margin: 3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
-          a {
-            color: $red3;
-            transition: color 200ms;
-            cursor: pointer;
+        .service {
+            padding: 3rem;
 
-            &:hover {
-              color: $grey4;
+            h2 {
+                margin-bottom: 3rem;
+
+                &:after {
+                    @include red-line;
+                    bottom: -15px;
+                    left: 0;
+                }
             }
-          }
+
+            h3 {
+                margin: 3rem 0;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin-left: 21px;
+
+                li::marker {
+                    font-size: 20px;
+                    color: $red3;
+                }
+
+                a {
+                    transition: color 300ms;
+
+                    &:hover {
+                        color: $red3;
+                    }
+                }
+            }
         }
 
-        li:nth-child(1) {
-          margin-left: 0;
+        .service-image {
+            display: flex;
+            align-items: center;
+
+            .gatsby-image-wrapper {
+                @include bx-shadow;
+            }
         }
-      }
     }
-  }
+
+    .services:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .services:nth-child(10) {
+        margin-bottom: 8rem;
+    }
 }

@@ -1,0 +1,29 @@
+.scroll {
+  display: flex;
+  cursor: pointer;
+  z-index: 1000000;
+  position: fixed;
+  right: 3rem;
+  bottom: 50px;
+  padding: 10px 12px;
+  background-color: $red3;
+  transition: 300ms;
+  // height: 30px;
+  // width: 30px;
+  // border: 2px solid #fff;
+  @include center;
+  @include bx-shadow;
+
+  img {
+    transform: rotate(270deg);
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    font-size: 1.8rem;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 2px;
+  }
+}

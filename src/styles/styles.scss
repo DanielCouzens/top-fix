@@ -4,11 +4,12 @@
 // Components
 @import "./components-styles/header.scss";
 @import "./components-styles/footer.scss";
-@import "./components-styles/footer.scss";
+@import "./components-styles//scroll.scss";
 @import "./components-styles/page-nav.scss";
 @import "./components-styles/carousel.scss";
 @import "./components-styles/accreditations.scss";
 @import "./components-styles/hero-slider.scss";
+@import "./components-styles/hero-two.scss";
 
 // Pages
 @import "./pages-styles/home.scss";
@@ -16,3 +17,4 @@
 @import "./pages-styles/services.scss";
 @import "./pages-styles/case-studies.scss";
 @import "./pages-styles/case-study.scss";
+@import "./pages-styles/environment.scss";

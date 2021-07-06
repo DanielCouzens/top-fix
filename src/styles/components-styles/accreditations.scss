@@ -4,8 +4,9 @@
     flex-direction: column;
 
     h2::after {
-        top: 15px;
+        top: 35px;
         @include red-line;
+        left: calc(50% - 15px);
     }
 
     .accreditations-logo {

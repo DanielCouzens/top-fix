@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
-import Layout from "../components/Layout";
-import PageNav from "../components/PageNav";
 import { Link, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import topFix from "../images/top-fix.svg";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { GatsbyImage } from "gatsby-plugin-image";
+
+import topFix from "../images/top-fix.svg";
+
+import Layout from "../components/Layout";
 import Hero from "../components/HeroSlider";
-import Slider from "react-slick";
+import PageNav from "../components/PageNav";
 import Carousel from "../components/Carousel";
 import Accreditations from "../components/Accreditations";
+
 import Aos from "aos";
 import "../../node_modules/aos/dist/aos.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export const pageQuery = graphql`
   query {
@@ -67,16 +67,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Hero />
-      {/* <Slider {...hero} className="overflow-hidden">
-          {slider.slides.map((image) => (
-            <GatsbyImage
-              image={image.gatsbyImageData}
-              alt={image.title.split("-").join(" ").split(".")[0]}
-              key={image.id}
-            />
-          ))}
-        </Slider> */}
-
       <PageNav />
       <div className="wrap">
         <div className="background"></div>
