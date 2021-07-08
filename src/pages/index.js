@@ -18,17 +18,6 @@ export const pageQuery = graphql`
   query {
     contentfulHomePage {
       title
-      sliderTitle
-      slides {
-        gatsbyImageData(
-          aspectRatio: 2.8
-          layout: FULL_WIDTH
-          cropFocus: BOTTOM
-          quality: 100
-        )
-        id
-        title
-      }
       text {
         raw
       }
@@ -41,14 +30,6 @@ export const pageQuery = graphql`
   }
 `;
 
-// const hero = {
-//   speed: 1000,
-//   fade: true,
-//   infinite: true,
-//   autoplay: true,
-//   dots: false,
-// };
-
 const IndexPage = ({ data }) => {
   const {
     title,
@@ -57,8 +38,6 @@ const IndexPage = ({ data }) => {
     workWithUsTitle,
     workWithUs,
   } = data.contentfulHomePage;
-
-  const slider = data.contentfulHomePage;
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });

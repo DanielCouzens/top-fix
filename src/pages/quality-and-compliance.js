@@ -23,7 +23,11 @@ export const pageQuery = graphql`
         raw
       }
       heroImage {
-        gatsbyImageData(layout: CONSTRAINED, aspectRatio: 1.4)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          aspectRatio: 1.4
+          cropFocus: BOTTOM
+        )
       }
       title
       badgeOne {
@@ -39,7 +43,7 @@ export const pageQuery = graphql`
 const Quality = ({ data }) => {
   const [textState, setTextState] = useState(false);
   const styles = textState ? "show-text" : "hide-text";
-  const read = textState ? "Read Less" : "Read More ...";
+  const read = textState ? "Read Less" : "Read More";
 
   const {
     heroImage,
@@ -66,7 +70,7 @@ const Quality = ({ data }) => {
               <button
                 onClick={() => setTextState(!textState)}
                 onKeyDown={() => setTextState(!textState)}>
-                {read}
+                <p>{read}</p>
               </button>
               <div className={styles}>{textTwo && renderRichText(textTwo)}</div>
               <div className="badge-wrap">

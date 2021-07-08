@@ -25,9 +25,9 @@
     .button-large {
       @include button-large;
 
-      &:hover {
-        @include button-hover
-      }
+      // &:hover {
+      //   @include button-hover
+      // }
     }
 
     .button-large:last-child {
@@ -95,9 +95,9 @@
         margin-top: 3rem;
         @include button-small;
 
-        &:hover {
-          @include button-hover;
-        }
+        // &:hover {
+        //   @include button-hover;
+        // }
       }
     }
 

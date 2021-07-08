@@ -35,9 +35,9 @@
         margin-top: 3rem;
         @include button-small;
 
-        &:hover {
-          @include button-hover;
-        }
+        // &:hover {
+        //   @include button-hover;
+        // }
       }
     }
 
@@ -87,9 +87,9 @@
         margin-top: 3rem;
         @include button-small;
 
-        &:hover {
-          @include button-hover;
-        }
+        // &:hover {
+        //   @include button-hover;
+        // }
       }
     }
   }

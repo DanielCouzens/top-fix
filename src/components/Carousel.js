@@ -63,7 +63,7 @@ const Carousel = () => {
         data-aos="fade-up"
         className="carousel-images"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-        {slides.map((edge) => {
+        {slides.map((edge, index) => {
           return (
             <Link
               className="case-study-link"
@@ -75,6 +75,7 @@ const Carousel = () => {
               <GatsbyImage
                 image={edge.node.caseStudiesMainPhoto.gatsbyImageData}
                 className="case-studies-image"
+                alt=""
               />
             </Link>
           );

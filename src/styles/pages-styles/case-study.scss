@@ -1,5 +1,4 @@
 .case-wrap {
-
   .page-break {
     @include page-break;
   }
@@ -111,9 +110,9 @@
           font-weight: 100;
         }
 
-        &:hover {
-          @include button-hover;
-        }
+        // &:hover {
+        //   @include button-hover;
+        // }
       }
 
       .hide,
@@ -269,7 +268,8 @@
         padding-right: 2px;
       }
 
-      img {}
+      img {
+      }
     }
   }
 

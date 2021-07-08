@@ -110,6 +110,10 @@ button {
     font-weight: 700;
     font-size: 2rem;
   }
+
+  &:hover {
+    background-color: $grey3;
+  }
 }
 
 @mixin button-small {
@@ -128,11 +132,15 @@ button {
     color: $white;
     font-weight: 700;
   }
+
+  &:hover {
+    background-color: $grey3;
+  }
 }
 
-@mixin button-hover {
-  background-color: $grey3;
-}
+// @mixin button-hover {
+//   background-color: $grey3;
+// }
 
 @mixin red-line {
   position: absolute;

@@ -110,6 +110,7 @@ const Services = ({ data }) => {
   return (
     <Layout>
       <Hero title={title} image={heroImage.gatsbyImageData} />
+      <PageNav />
       <div className="services-wrap">
         <div className="background"></div>
         <div className="page-wrap" id="sfs">

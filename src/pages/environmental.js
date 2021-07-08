@@ -36,7 +36,7 @@ export const pageQuery = graphql`
 const Environmental = ({ data }) => {
   const [textState, setTextState] = useState(false);
   const styles = textState ? "show-text" : "hide-text";
-  const read = textState ? "Read Less" : "Read More ...";
+  const read = textState ? "Read Less" : "Read More";
 
   const {
     heroImage,
@@ -62,7 +62,7 @@ const Environmental = ({ data }) => {
               <button
                 onClick={() => setTextState(!textState)}
                 onKeyDown={() => setTextState(!textState)}>
-                {read}
+                <p>{read}</p>
               </button>
               <div className={styles}>{textTwo && renderRichText(textTwo)}</div>
               <div className="badge-wrap">

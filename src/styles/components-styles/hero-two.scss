@@ -1,29 +1,70 @@
 .hero-container {
-    max-height: calc(35vw);
-    overflow: hidden;
-    position: relative;
+  max-height: calc(35vw);
+  overflow: hidden;
+  position: relative;
 
-    h1 {
-        position: absolute;
-        bottom: 50px;
-        left: 80px;
-        color: $white;
-        z-index: 110;
-        font-size: 7rem;
+  h1 {
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    color: $white;
+    z-index: 110;
+    font-size: 7rem;
+    opacity: 0;
 
-        &:after {
-            @include big-red-line;
-            left: 0;
-            top: -15px;
-        }
+    &:after {
+      @include big-red-line;
+      left: 0;
+      top: -15px;
+    }
+    // animation-delay: 700ms;
+    animation-name: buttonreveal;
+    animation-duration: 1000ms;
+    animation-timing-function: linear ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform: translateX(-100vw);
+  }
+
+  @keyframes buttonreveal {
+    0% {
+      opacity: 0;
+      transform: translateX(-100vw);
     }
 
-    .overlay {
-        z-index: 100;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-image: linear-gradient(to right, #00000095, #00000010);
+    60% {
+      opacity: 0;
     }
 
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  // .zoom-one {
+  //     display: block;
+  //     animation-name: zoomin;
+  //     animation-duration: 4000ms;
+  //     animation-timing-function: linear ease-in-out;
+  //     animation-iteration-count: infinite;
+  // }
+
+  // @keyframes zoomin {
+  //     0% {
+  //         transform: scale(1);
+  //     }
+
+  //     100% {
+  //         transform: scale(1.1);
+  //     }
+  // }
+
+  .overlay {
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right, #00000095, #00000010);
+  }
 }
