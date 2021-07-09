@@ -96,13 +96,16 @@
       10% {
         opacity: 1;
       }
+
       80% {
         opacity: 1;
       }
+
       100% {
         opacity: 0;
       }
     }
+
     @keyframes logoreveal {
       0% {
         opacity: 0;
@@ -111,9 +114,11 @@
       10% {
         opacity: 1;
       }
+
       80% {
         opacity: 1;
       }
+
       100% {
         opacity: 0;
       }
@@ -163,9 +168,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    // bottom: 25px;
-    // left: calc(50% - 450px);
-    bottom: 50px;
+    bottom: 63px;
     right: 80px;
 
     .button-large {
@@ -207,6 +210,7 @@
         opacity: 1;
       }
     }
+
     @keyframes buttonrevealthree {
       0% {
         opacity: 0;

@@ -27,10 +27,12 @@ const Carousel = () => {
     }
   `);
 
-  const slides = data.allContentfulCaseStudies.edges;
+  const slidesCarousel = data.allContentfulCaseStudies.edges;
   const [index, setIndex] = useState(0);
   const delay = 5000;
   const timeoutRef = useRef(null);
+
+  const dots = slidesCarousel.slice(0, -2);
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -43,7 +45,7 @@ const Carousel = () => {
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+          prevIndex === slidesCarousel.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -62,8 +64,16 @@ const Carousel = () => {
       <div
         data-aos="fade-up"
         className="carousel-images"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-        {slides.map((edge, index) => {
+        style={
+          index <= slidesCarousel.length - 3
+            ? {
+                transform: `translateX(${-index * 33.33333}%)`,
+              }
+            : {
+                transform: `translateX(${-index * 0}%)`,
+              }
+        }>
+        {slidesCarousel.map((edge, index) => {
           return (
             <Link
               className="case-study-link"
@@ -77,18 +87,23 @@ const Carousel = () => {
                 className="case-studies-image"
                 alt=""
               />
+              <div className="case-study-link-button">
+                <p>View Case</p>
+              </div>
             </Link>
           );
         })}
       </div>
       <div className="carousel-dots">
-        {slides.map((_, idx) => (
+        {dots.map((_, idx) => (
           <div
             onClick={() => {
               setIndex(idx);
             }}
             key={idx}
-            className={`carousel-dot${index === idx ? " active" : ""}`}></div>
+            className="carousel-dot"
+            // className={`carousel-dot${index === idx ? " active" : ""}`}
+          ></div>
         ))}
       </div>
     </div>

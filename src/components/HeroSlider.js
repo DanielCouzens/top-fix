@@ -13,19 +13,44 @@ const HeroSlider = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
         }
         slideTwo {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            quality: 100
+            aspectRatio: 2.33
+            jpegProgressive: false
+          )
         }
         slideThree {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            quality: 100
+            aspectRatio: 2.33
+            jpegProgressive: false
+          )
         }
         slideFour {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            quality: 100
+            aspectRatio: 2.33
+            jpegProgressive: false
+          )
         }
         slideFive {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            quality: 100
+            aspectRatio: 2.33
+            jpegProgressive: false
+          )
         }
         slideSix {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            quality: 100
+            aspectRatio: 2.33
+            jpegProgressive: false
+          )
         }
       }
     }
@@ -35,7 +60,7 @@ const HeroSlider = () => {
 
   const slides = [1, 2, 3, 4, 5, 6];
 
-  const [index, setIndex] = useState(0);
+  const [indexSlide, setIndexSlide] = useState(0);
   const delay = 4000;
   const timeoutRef = useRef(null);
 
@@ -49,45 +74,51 @@ const HeroSlider = () => {
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
-        setIndex((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        setIndexSlide((prevIndexSlide) =>
+          prevIndexSlide === slides.length - 1 ? 0 : prevIndexSlide + 1
         ),
       delay
     );
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [indexSlide]);
 
   return (
     <div className="hero-slider">
       <div className="hero-slider-overlay"></div>
       <div
         className="hero-images"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+        style={{ transform: `translate3d(${-indexSlide * 100}%, 0, 0)` }}>
         <GatsbyImage
           image={data.contentfulHomePage.slideOne.gatsbyImageData}
-          className={`hero-image ${index === 0 ? "zoom-one" : " "}`}
+          className={`hero-image ${indexSlide === 0 ? "zoom-one" : " "}`}
+          alt=""
         />
         <GatsbyImage
           image={data.contentfulHomePage.slideTwo.gatsbyImageData}
-          className={`hero-image ${index === 1 ? "zoom-two" : " "}`}
+          className={`hero-image ${indexSlide === 1 ? "zoom-two" : " "}`}
+          alt=""
         />
         <GatsbyImage
           image={data.contentfulHomePage.slideThree.gatsbyImageData}
-          className={`hero-image ${index === 2 ? "zoom-one" : " "}`}
+          className={`hero-image ${indexSlide === 2 ? "zoom-one" : " "}`}
+          alt=""
         />
         <GatsbyImage
           image={data.contentfulHomePage.slideFour.gatsbyImageData}
-          className={`hero-image ${index === 3 ? "zoom-two" : " "}`}
+          className={`hero-image ${indexSlide === 3 ? "zoom-two" : " "}`}
+          alt=""
         />
         <GatsbyImage
           image={data.contentfulHomePage.slideFive.gatsbyImageData}
-          className={`hero-image ${index === 4 ? "zoom-one" : " "}`}
+          className={`hero-image ${indexSlide === 4 ? "zoom-one" : " "}`}
+          alt=""
         />
         <GatsbyImage
           image={data.contentfulHomePage.slideSix.gatsbyImageData}
-          className={`hero-image ${index === 5 ? "zoom-two" : " "}`}
+          className={`hero-image ${indexSlide === 5 ? "zoom-two" : " "}`}
+          alt=""
         />
       </div>
 

@@ -16,7 +16,7 @@
   }
 
   .carousel-images {
-    width: 100%;
+    width: 960px;
     white-space: nowrap;
     transition: ease 2000ms;
 
@@ -36,22 +36,26 @@
       }
     }
 
-    .case-study-link:after {
+    .case-study-link-button {
       position: absolute;
       content: "View Case";
       bottom: 25px;
       left: 20px;
       z-index: 1000;
       border: 2px solid #fff;
-      color: #fff;
+
       padding: 5px 10px;
       transition: 300ms;
-    }
 
-    .case-study-link:hover:after {
-      border: 2px solid $red3;
-      background-color: $red3;
-      @include bx-shadow;
+      p {
+        color: #fff;
+      }
+
+      &:hover {
+        border: 2px solid $red3;
+        background-color: $red3;
+        @include bx-shadow;
+      }
     }
   }
 
@@ -67,9 +71,14 @@
     cursor: pointer;
     margin: 3rem 7px 0px;
     background-color: $grey2;
+    transition: 300ms;
+
+    &:hover {
+      background-color: $red3;
+    }
   }
 
-  .carousel-dot.active {
-    background-color: $red3;
-  }
+  // .carousel-dot.active {
+
+  // }
 }

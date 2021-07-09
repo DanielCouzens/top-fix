@@ -62,11 +62,18 @@ const IndexPage = ({ data }) => {
               <img src={topFix} height="50" width="50" alt="topfix styling" />
             </div>
           </section>
-          <section className="page-break"></section>
+          <div data-aos="fade-left" className="page-break">
+            <div className="bars-wrap">
+              <img src={topFix} height="50" width="50" alt="topfix styling" />
+            </div>
+          </div>
           <Carousel />
-          <section className="page-break"></section>
           <Accreditations />
-          <section className="page-break"></section>
+          <div data-aos="fade-left" className="page-break">
+            <div className="bars-wrap">
+              <img src={topFix} height="50" width="50" alt="topfix styling" />
+            </div>
+          </div>
           <section className="work-with-us-wrap">
             <div className="work-with-us-image" data-aos="fade-up">
               <GatsbyImage

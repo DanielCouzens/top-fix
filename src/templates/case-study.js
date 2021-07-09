@@ -26,7 +26,7 @@ export const query = graphql`
       }
       caseStudiesSlider {
         gatsbyImageData(
-          aspectRatio: 2.33
+          aspectRatio: 2.53
           layout: FULL_WIDTH
           cropFocus: BOTTOM
           quality: 100
@@ -61,7 +61,6 @@ const hero = {
   lazyLoad: true,
   infinite: true,
   autoplay: true,
-  dots: true,
 };
 
 function CaseStudy({ data }) {
@@ -85,28 +84,46 @@ function CaseStudy({ data }) {
 
   return (
     <Layout>
-      <Slider {...hero} className="overflow-hidden">
-        {caseStudiesSlider.map((image) => (
-          <GatsbyImage
-            image={image.gatsbyImageData}
-            alt={image.title.split("-").join(" ").split(".")[0]}
-            key={image.id}
-          />
-        ))}
-      </Slider>
+      <div className="case-study-slider-wrap">
+        <div className="overlay"></div>
+        <Slider {...hero} className="overflow-hidden">
+          {caseStudiesSlider.map((image) => (
+            <GatsbyImage
+              image={image.gatsbyImageData}
+              alt={image.title.split("-").join(" ").split(".")[0]}
+              key={image.id}
+            />
+          ))}
+        </Slider>
+        <div className="case-study-title">
+          <h1>{caseStudiesTitle}</h1>
+        </div>
+      </div>
 
+      <div
+        className="description"
+        // data-aos="fade-left"
+      >
+        <p>{caseStudiesTextTwo.caseStudiesTextTwo}</p>
+      </div>
       <div className="case-wrap">
-        <div className="case-background"></div>
+        {/* <div className="case-background"></div> */}
+
         <div className="case-study-container">
           <div className="case-study-page">
-            <div data-aos="fade-up" className="bars-wrap">
+            <div
+              // data-aos="fade-up"
+              className="bars-wrap">
               <img src={topFix} height="50" width="50" alt="topfix styling" />
             </div>
 
-            <div className="case-study-text-wrap" data-aos="fade-up">
-              <h1>{caseStudiesTitle}</h1>
+            <div
+              className="case-study-text-wrap"
+              // data-aos="fade-up"
+            >
               {caseStudiesText && renderRichText(caseStudiesText)}
             </div>
+
             <div className="case-study-information-wrap">
               <button
                 className="button"
@@ -134,12 +151,13 @@ function CaseStudy({ data }) {
                 className="button"
                 onClick={() => setGalleryState(!galleryState)}
                 onKeyDown={() => setGalleryState(!galleryState)}>
-                <p data-aos="fade-left">Gallery</p>
+                <p
+                // data-aos="fade-left"
+                >
+                  Gallery
+                </p>
               </button>
             </div>
-          </div>
-          <div className="description" data-aos="fade-left">
-            <p>{caseStudiesTextTwo.caseStudiesTextTwo}</p>
           </div>
         </div>
         <div className={galleryStyles}>
@@ -153,7 +171,7 @@ function CaseStudy({ data }) {
             <GatsbyImage
               image={image.gatsbyImageData}
               // alt={image.title.split("-").join(" ").split(".")[0]}
-              // key={image.id}
+              key={image.id}
             />
           ))}
         </div>
