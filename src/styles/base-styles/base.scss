@@ -20,6 +20,11 @@ html {
 
 .pseudo-header {
   height: 90px;
+
+  @media (max-width: 992px) {
+    height: 50px;
+  }
+
 }
 
 * {
@@ -32,7 +37,11 @@ html {
 
 // Font Settings
 h1 {
-  font-size: 3rem;
+  font-size: 7rem;
+
+  @media (max-width: 1490px) {
+    font-size: 5rem;
+  }
 }
 
 h1,
@@ -113,6 +122,18 @@ button {
 
   &:hover {
     background-color: $grey3;
+  }
+
+  @media (max-width: 1490px) {
+
+    width: 168px;
+
+    p {
+      color: $white;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
   }
 }
 

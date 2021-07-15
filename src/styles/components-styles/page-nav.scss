@@ -5,6 +5,10 @@
   @include center;
   background-color: #fff;
 
+  @media (max-width: 1130px) {
+    display: none;
+  }
+
   .page-nav-wrap {
     max-width: 1200px;
     display: flex;

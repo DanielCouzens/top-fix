@@ -10,8 +10,13 @@
     left: 80px;
     color: $white;
     z-index: 110;
-    font-size: 7rem;
     opacity: 0;
+
+    @media (max-width: 1210px) {
+      bottom: 15px;
+      left: 40px;
+
+    }
 
     &:after {
       @include big-red-line;

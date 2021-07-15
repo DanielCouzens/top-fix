@@ -3,6 +3,10 @@
   overflow: hidden;
   position: relative;
 
+  @media (max-width: 1130px) {
+    @include bx-shadow;
+  }
+
   .hero-images {
     white-space: nowrap;
 
@@ -47,6 +51,28 @@
 
       100% {
         transform: scale(1.15) translateX(-100px);
+      }
+    }
+
+    @media (max-width: 1450px) {
+      @keyframes zoomin {
+        0% {
+          transform: scale(1) translateX(0);
+        }
+
+        100% {
+          transform: scale(1.15) translateX(50px);
+        }
+      }
+
+      @keyframes zoomintwo {
+        0% {
+          transform: scale(1) translateX(0);
+        }
+
+        100% {
+          transform: scale(1.15) translateX(-50px);
+        }
       }
     }
   }
@@ -134,9 +160,15 @@
     margin-right: 25px;
     @include center;
 
+    @media (max-width: 1210px) {
+      bottom: 15px;
+      left: 40px;
+
+    }
+
     h1 {
       color: $white;
-      font-size: 7rem;
+
 
       &:after {
         @include big-red-line;
@@ -170,6 +202,12 @@
     position: absolute;
     bottom: 63px;
     right: 80px;
+
+    @media (max-width: 1210px) {
+      bottom: 22px;
+      right: 40px;
+
+    }
 
     .button-large {
       animation-duration: 1000ms;

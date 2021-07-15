@@ -8,6 +8,10 @@
   position: fixed;
   @include bx-shadow;
 
+  @media (max-width: 992px) {
+    height: 50px;
+  }
+
   .header-logo {
     background-color: $white;
     left: 40px;
@@ -16,9 +20,34 @@
     padding: 1rem;
     @include bx-shadow;
 
+    @media (max-width: 992px) {
+      top: 20px;
+      left: 20px;
+    }
+
+
     img {
       width: 100px;
       height: 100px;
+
+      @media (max-width: 992px) {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  .nav-show {
+    transform: translateX(0);
+    transition: 500ms;
+  }
+
+  .nav-hide {
+    transform: translateX(0);
+
+    @media (max-width: 992px) {
+      transform: translateX(+500px);
+      transition: 500ms;
     }
   }
 
@@ -29,14 +58,39 @@
     flex-direction: column;
     align-items: flex-end;
 
+    @media (max-width: 992px) {
+      z-index: 110;
+      padding: 1.8rem;
+      top: 50px;
+      right: 0;
+      position: absolute;
+      @include bx-shadow;
+      align-items: flex-start;
+      margin-right: 0;
+      background-color: $grey0;
+    }
+
     .header-contact-details {
       display: flex;
       align-items: center;
+
+      @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $grey4;
+        padding: 1.8rem;
+      }
 
       .header-contact {
         img {
           margin: 0 5px;
           width: 20px;
+        }
+
+        p {
+          @media (max-width: 992px) {
+            color: $white;
+          }
         }
 
         .header-email {
@@ -45,6 +99,7 @@
 
         display: flex;
         align-items: center;
+
       }
 
       .linked-in {
@@ -61,6 +116,20 @@
       ul {
         a {
           margin: 0.5rem 0.8rem;
+          transition: 300ms;
+
+          &:hover {
+            color: $red3;
+          }
+        }
+      }
+
+      @media (max-width: 992px) {
+
+        ul {
+          padding-top: 1.8rem;
+          display: flex;
+          flex-direction: column;
         }
       }
     }
