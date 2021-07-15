@@ -23,6 +23,8 @@
       animation-duration: 7000ms;
       animation-timing-function: linear ease;
       animation-iteration-count: 1;
+
+      @media (max-width: 780px) {}
     }
 
     .zoom-three,
@@ -71,7 +73,29 @@
         }
 
         100% {
-          transform: scale(1.15) translateX(-50px);
+          transform: scale(1.15) translateX(-20px);
+        }
+      }
+    }
+
+    @media (max-width: 780px) {
+      @keyframes zoomin {
+        0% {
+          transform: scale(1) translateX(0);
+        }
+
+        100% {
+          transform: scale(1.08) translateX(20px);
+        }
+      }
+
+      @keyframes zoomintwo {
+        0% {
+          transform: scale(1) translateX(0);
+        }
+
+        100% {
+          transform: scale(1.08) translateX(-20px);
         }
       }
     }
@@ -93,6 +117,14 @@
       animation-delay: 1000ms;
       animation-name: titlereveal;
       animation-duration: 5000ms;
+
+      @media (max-width: 1490px) {
+        font-size: 5rem;
+      }
+
+      @media (max-width: 1040px) {
+        font-size: 3rem;
+      }
     }
 
     h2,
@@ -112,6 +144,16 @@
       height: 200px;
       padding: 10px;
       @include bx-shadow;
+
+      @media (max-width: 1490px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media (max-width: 1040px) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     @keyframes titlereveal {
@@ -161,9 +203,14 @@
     @include center;
 
     @media (max-width: 1210px) {
-      bottom: 15px;
+      bottom: 20px;
       left: 40px;
 
+    }
+
+    @media (max-width: 780px) {
+      bottom: 10px;
+      left: 3px
     }
 
     h1 {
@@ -174,6 +221,10 @@
         @include big-red-line;
         left: 0;
         top: -15px;
+
+        @media (max-width: 780px) {
+          display: none;
+        }
       }
     }
 
@@ -204,9 +255,14 @@
     right: 80px;
 
     @media (max-width: 1210px) {
-      bottom: 22px;
+      bottom: 28px;
       right: 40px;
 
+    }
+
+    @media (max-width: 780px) {
+      left: 10px;
+      bottom: 50px;
     }
 
     .button-large {
@@ -237,6 +293,10 @@
       margin-left: 25px;
       animation-delay: 2000ms;
       animation-name: buttonrevealthree;
+
+      @media (max-width: 780px) {
+        margin-left: 10px;
+      }
     }
 
     @keyframes buttonrevealtwo {

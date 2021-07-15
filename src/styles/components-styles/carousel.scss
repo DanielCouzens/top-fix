@@ -16,11 +16,13 @@
   }
 
   .carousel-images {
+
     width: 960px;
     white-space: nowrap;
     transition: ease 2000ms;
 
     .case-study-link {
+
       margin-right: 20px;
       position: relative;
 
@@ -29,6 +31,7 @@
       }
 
       .case-studies-image {
+
         display: inline-block;
         width: 300px;
         @include bx-shadow;

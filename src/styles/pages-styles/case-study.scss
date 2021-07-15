@@ -18,16 +18,25 @@
     bottom: 50px;
     left: 80px;
 
+    @media (max-width: 1210px) {
+      bottom: 20px;
+      left: 40px;
+
+    }
+
 
     h1 {
       color: $white;
-      font-size: 7rem;
       opacity: 0;
 
       &::after {
         left: 0;
         top: -15px;
         @include big-red-line;
+
+        @media (max-width: 780px) {
+          top: -10px;
+        }
       }
 
       animation-name: casetitlereveal;
@@ -60,6 +69,10 @@
   padding: 6rem 3rem 0rem;
   margin: 0 auto;
   max-width: 1130px;
+
+  h2 {
+    margin: 3rem 0;
+  }
 }
 
 
@@ -90,11 +103,11 @@
       padding: 12rem 0 0;
     }
 
-    .description {
-      width: 100%;
-      max-width: 1130px;
-      padding: 3rem 3rem 3rem;
-    }
+    // .description {
+    //   width: 100%;
+    //   max-width: 1130px;
+    //   padding: 3rem 3rem 3rem;
+    // }
 
     .case-study-page {
       padding: 0 3rem;

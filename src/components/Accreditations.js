@@ -28,11 +28,13 @@ const Accreditations = () => {
       <h2 data-aos="fade-up">Accreditations</h2>
       <div className="accreditations-logo" data-aos="fade-left">
         {accreditations.map((img) => (
-          <GatsbyImage
-            image={img.gatsbyImageData}
-            alt={img.title}
-            key={img.id}
-          />
+          <div className="image-wrap">
+            <GatsbyImage
+              image={img.gatsbyImageData}
+              alt={img.title}
+              key={img.id}
+            />
+          </div>
         ))}
       </div>
     </div>

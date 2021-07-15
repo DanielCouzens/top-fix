@@ -2,7 +2,7 @@
     position: relative;
 
     .background {
-        z-index: -1;
+
         width: 100%;
         height: 100%;
         position: absolute;
@@ -26,6 +26,7 @@
     }
 
     .services {
+
         margin: 3rem 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -33,7 +34,7 @@
 
         span {
             position: absolute;
-            top: -100px;
+            top: -180px;
         }
 
         .service {

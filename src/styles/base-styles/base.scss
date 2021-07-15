@@ -42,6 +42,10 @@ h1 {
   @media (max-width: 1490px) {
     font-size: 5rem;
   }
+
+  @media (max-width: 1040px) {
+    font-size: 3rem;
+  }
 }
 
 h1,
@@ -125,15 +129,22 @@ button {
   }
 
   @media (max-width: 1490px) {
-
     width: 168px;
 
     p {
-      color: $white;
-      font-weight: 700;
       font-size: 1.8rem;
     }
 
+  }
+
+  @media (max-width: 1040px) {
+    width: 138px;
+    padding: 10px;
+  }
+
+  @media (max-width: 780px) {
+
+    padding: 5px;
   }
 }
 
@@ -177,6 +188,11 @@ button {
   height: 12px;
   width: 70px;
   background-color: $red3;
+
+  @media (max-width: 1040px) {
+    height: 8px;
+    width: 50px;
+  }
 }
 
 .layout {

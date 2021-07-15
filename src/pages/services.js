@@ -168,8 +168,6 @@ const Services = ({ data }) => {
             </div>
           </div>
 
-          <Carousel />
-
           <div className="services">
             <span id="carpentry-bespoke-joinery-cladding"></span>
             <div className="service service-image" data-aos="fade-up">
@@ -222,6 +220,7 @@ const Services = ({ data }) => {
               <GatsbyImage image={hygienicWallLiningImage.gatsbyImageData} />
             </div>
           </div>
+          <Carousel />
           <Accreditations />
         </div>
       </div>

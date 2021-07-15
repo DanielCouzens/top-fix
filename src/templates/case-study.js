@@ -34,8 +34,8 @@ export const query = graphql`
         id
         title
       }
-      caseStudiesTextTwo {
-        caseStudiesTextTwo
+      caseStudyDescription {
+        raw
       }
       caseStudiesGallery {
         gatsbyImageData(layout: CONSTRAINED)
@@ -74,7 +74,7 @@ function CaseStudy({ data }) {
     caseStudiesText,
     caseStudiesProducts,
     caseStudiesSlider,
-    caseStudiesTextTwo,
+    caseStudyDescription,
     caseStudiesGallery,
   } = data.contentfulCaseStudies;
 
@@ -104,7 +104,7 @@ function CaseStudy({ data }) {
         className="description"
         // data-aos="fade-left"
       >
-        <p>{caseStudiesTextTwo.caseStudiesTextTwo}</p>
+        <p>{caseStudyDescription && renderRichText(caseStudyDescription)}</p>
       </div>
       <div className="case-wrap">
         {/* <div className="case-background"></div> */}
