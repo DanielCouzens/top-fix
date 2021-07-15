@@ -46,6 +46,10 @@ h1 {
   @media (max-width: 1040px) {
     font-size: 3rem;
   }
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
 }
 
 h1,
@@ -61,10 +65,18 @@ h3 {
 
 h2 {
   font-size: 2.5rem;
+
+  @media (max-width: 500px) {
+    font-size: 1.8rem;
+  }
 }
 
 h3 {
   font-size: 2rem;
+
+  @media (max-width: 500px) {
+    font-size: 1.8rem;
+  }
 }
 
 textarea,
@@ -77,6 +89,10 @@ p {
   font-size: 1.8rem;
   color: $grey3;
   text-decoration: none;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 }
 
 button {
@@ -98,6 +114,10 @@ button {
   width: 70%;
   height: 1px;
   background-color: $grey2;
+
+  @media (max-width: 500px) {
+    margin: 4rem auto;
+  }
 }
 
 @mixin center {

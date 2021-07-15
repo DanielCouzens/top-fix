@@ -1,12 +1,18 @@
 .footer {
-  // height: 800px;
-  // background-image: linear-gradient(to right, $grey2, $grey3);
   background-color: $grey3;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+
+  @media (max-width: 1570px) {
+    align-items: flex-end;
+  }
+
+  @media (max-width: 870px) {
+    align-items: center;
+  }
 
   .footer-logo {
     background-color: $white;
@@ -20,6 +26,10 @@
       width: 70px;
       height: 70px;
     }
+
+    @media (max-width: 870px) {
+      display: none;
+    }
   }
 
   .footer-elements-wrap {
@@ -28,10 +38,18 @@
     display: flex;
     justify-content: space-around;
 
+    @media (max-width: 780px) {
+      flex-direction: column;
+      align-items: center;
+      flex-flow: column-reverse;
+    }
+
     .footer-elements {
       .footer-nav {
         display: flex;
         flex-direction: column;
+
+
 
         a {
           color: #fff;
@@ -55,15 +73,28 @@
       h3,
       p {
         color: $white;
+
+        @media (max-width: 780px) {
+          text-align: center;
+        }
       }
 
       h2 {
         margin-left: 0;
         margin-bottom: 1.8rem;
+
+        @media (max-width: 780px) {
+          margin-top: 1.8rem;
+        }
       }
 
       h3 {
         margin-bottom: 1.8rem;
+
+        @media (max-width: 780px) {
+          margin-top: 1.8rem;
+
+        }
       }
 
       p {
@@ -74,6 +105,10 @@
         display: flex;
         align-items: flex-start;
         flex-direction: column;
+
+        @media (max-width: 780px) {
+          align-items: center;
+        }
 
         .footer-contact {
           img {
@@ -106,6 +141,23 @@
             margin-top: 2px;
             margin-left: 9px;
             width: 11px;
+          }
+        }
+
+        .footer-logo-two {
+          display: none;
+          margin-top: 1rem;
+          background-color: $white;
+          padding: 0.7rem;
+          @include bx-shadow;
+
+          @media (max-width: 870px) {
+            display: block;
+          }
+
+          @media (max-width: 780px) {
+            display: none;
+
           }
         }
       }

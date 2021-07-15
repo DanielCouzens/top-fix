@@ -3,6 +3,18 @@
   max-width: 960px;
   overflow: hidden;
 
+  @media (max-width: 1010px) {
+    max-width: 660px;
+  }
+
+  @media (max-width: 700px) {
+    max-width: 250px;
+  }
+
+  @media (max-width: 700px) {
+    margin: 2rem auto;
+  }
+
   h2 {
     text-align: center;
     position: relative;
@@ -16,10 +28,17 @@
   }
 
   .carousel-images {
-
     width: 960px;
     white-space: nowrap;
     transition: ease 2000ms;
+
+    @media (max-width: 1010px) {
+      max-width: 660px;
+    }
+
+    @media (max-width: 700px) {
+      max-width: 250px;
+    }
 
     .case-study-link {
 
@@ -36,6 +55,14 @@
         width: 300px;
         @include bx-shadow;
         transition: 300ms;
+
+        @media (max-width: 1010px) {
+          max-width: 200px;
+        }
+
+        @media (max-width: 700px) {
+          max-width: 250px;
+        }
       }
     }
 

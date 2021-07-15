@@ -110,6 +110,9 @@ const Footer = () => {
                 />
               </a>
             </div>
+            <div className="footer-logo-two">
+              <img src={Logo} width="50" height="50" alt="topfix logo" />
+            </div>
           </div>
         </div>
       </div>

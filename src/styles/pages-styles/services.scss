@@ -14,7 +14,7 @@
 
 .page-wrap {
     .page-break {
-        margin: 10rem auto;
+        @include page-break;
 
         .bars-wrap {
             position: absolute;

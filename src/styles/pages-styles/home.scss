@@ -3,6 +3,10 @@
   margin: 0rem auto;
   max-width: 1200px;
 
+  @media (max-width:500px) {
+    padding: 2rem 0;
+  }
+
   .page-break {
     @include page-break;
   }
@@ -15,6 +19,10 @@
     .welcome {
       z-index: 1;
       width: 70%;
+
+      @media (max-width:500px) {
+        width: 90%;
+      }
 
       h2 {
         position: relative;
@@ -62,15 +70,40 @@
     justify-content: space-around;
     padding: 0 6rem;
 
+    @media (max-width:780px) {
+      flex-direction: column;
+      padding: 0;
+    }
+
     .work-with-us-image {
       width: 50%;
       @include bx-shadow;
+
+      @media (max-width:780px) {
+        width: 70%;
+      }
+
+      @media (max-width:500px) {
+        width: 90%;
+      }
     }
+
+
 
     .work-with-us {
       z-index: 1;
       width: 50%;
       padding: 6rem 0 6rem 6rem;
+
+      @media (max-width:780px) {
+        width: 70%;
+        padding: 6rem 0 0rem;
+      }
+
+      @media (max-width:780px) {
+        width: 90%;
+        padding: 2rem 0 0rem;
+      }
 
       h2 {
         position: relative;
