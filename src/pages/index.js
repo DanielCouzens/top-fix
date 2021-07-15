@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => {
           </div>
           <Carousel />
           <Accreditations />
-          <div data-aos="fade-left" className="page-break">
+          <div className="page-break">
             <div className="bars-wrap">
               <img src={topFix} height="50" width="50" alt="topfix styling" />
             </div>

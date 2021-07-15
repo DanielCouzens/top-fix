@@ -60,9 +60,8 @@ const Carousel = () => {
 
   return (
     <div className="carousel">
-      <h2 data-aos="fade-left">Case Studies</h2>
+      <h2>Case Studies</h2>
       <div
-        data-aos="fade-up"
         className="carousel-images"
         style={
           index <= slidesCarousel.length - 3

@@ -57,14 +57,17 @@
 
   .nav-show {
     transform: translateX(0);
+    -webkit-transform: translatX(0);
     transition: 500ms;
   }
 
   .nav-hide {
     transform: translateX(0);
+    -webkit-transform: translatX(0);
 
     @media (max-width: 992px) {
-      transform: translateX(+500px);
+      transform: translateX(500px);
+      -webkit-transform: translatX(500px);
       transition: 500ms;
     }
   }

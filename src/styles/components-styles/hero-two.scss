@@ -4,6 +4,14 @@
   position: relative;
   @include bx-shadow;
 
+  @media (max-width: 780px) {
+    max-height: calc(50vw);
+  }
+
+  @media (max-width: 500px) {
+    max-height: calc(30vh);
+  }
+
   h1 {
     position: absolute;
     bottom: 50px;

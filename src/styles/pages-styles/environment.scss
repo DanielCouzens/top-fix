@@ -1,6 +1,5 @@
 .environment-wrap {
-  .background {
-  }
+  .background {}
 
   .page-wrap {
     .environment-container {
@@ -10,6 +9,10 @@
 
       .environment {
         width: 70%;
+
+        @media (max-width:500px) {
+          width: 90%;
+        }
 
         h2 {
           position: relative;
@@ -109,6 +112,10 @@
       .bars-wrap {
         z-index: 1;
         margin-top: 25px;
+
+        @media (max-width: 780px) {
+          display: none;
+        }
 
         img {
           width: 100%;

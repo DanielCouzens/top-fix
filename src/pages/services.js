@@ -109,7 +109,11 @@ const Services = ({ data }) => {
 
   return (
     <Layout>
-      <Hero title={title} image={heroImage.gatsbyImageData} />
+      <Hero
+        title={title}
+        image={heroImage.gatsbyImageData}
+        mobimage={partitioningDryliningImage.gatsbyImageData}
+      />
       <PageNav />
       <div className="services-wrap">
         <div className="background"></div>
@@ -168,7 +172,7 @@ const Services = ({ data }) => {
             </div>
           </div>
 
-          <div className="services">
+          <div id="services-cont" className="services">
             <span id="carpentry-bespoke-joinery-cladding"></span>
             <div className="service service-image" data-aos="fade-up">
               <div className="before-image" data-aos="fade-left"></div>
@@ -184,7 +188,7 @@ const Services = ({ data }) => {
             </div>
           </div>
 
-          <div className="services">
+          <div id="services-cont-two" className="services">
             <span id="finishing-plastering-tape-and-joint"></span>
             <div className="service" data-aos="fade-up">
               {finishingPlasteringTapeAndJoint &&
@@ -198,7 +202,7 @@ const Services = ({ data }) => {
             </div>
           </div>
 
-          <div className="services">
+          <div className="services services-cont">
             <span id="acoustic-solutions"></span>
             <div className="service service-image" data-aos="fade-up">
               <div className="before-image" data-aos="fade-left"></div>
@@ -209,7 +213,7 @@ const Services = ({ data }) => {
             </div>
           </div>
 
-          <div className="services">
+          <div id="services-cont-three" className="services">
             <span id="hygienic-wall-lining"></span>
             <div className="service" data-aos="fade-up">
               {hygienicWallLining &&
