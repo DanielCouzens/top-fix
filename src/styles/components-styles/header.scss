@@ -95,7 +95,10 @@
       height: 100vh;
       width: 100vw;
       align-items: center;
+      justify-content: flex-start;
+      padding-top: 6rem;
     }
+
 
     .header-contact-details {
       display: flex;
@@ -159,9 +162,18 @@
       @media (max-width: 992px) {
 
         ul {
-          padding-top: 1.8rem;
+          padding: 1rem;
           display: flex;
           flex-direction: column;
+
+
+          a {
+            border: 1px solid $grey1;
+            padding: 10px;
+            background-color: $white;
+            font-size: 2rem;
+
+          }
         }
       }
     }
