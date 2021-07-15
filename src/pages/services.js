@@ -113,8 +113,9 @@ const Services = ({ data }) => {
       <PageNav />
       <div className="services-wrap">
         <div className="background"></div>
-        <div className="page-wrap" id="sfs">
+        <div className="page-wrap">
           <div className="services">
+            <span id="sfs"></span>
             <div className="service service-image" data-aos="fade-up">
               <div className="before-image" data-aos="fade-left"></div>
               <GatsbyImage image={serviceSfsImage.gatsbyImageData} />
@@ -125,6 +126,7 @@ const Services = ({ data }) => {
           </div>
 
           <div className="services">
+            <span id="suspended-ceilings"></span>
             <div className="service" data-aos="fade-up">
               {suspendedCeilings && renderRichText(suspendedCeilings, options)}
             </div>
@@ -135,6 +137,7 @@ const Services = ({ data }) => {
           </div>
 
           <div className="services">
+            <span id="partitioning-drylining"></span>
             <div className="service service-image" data-aos="fade-up">
               <div className="before-image" data-aos="fade-left"></div>
               <GatsbyImage image={partitioningDryliningImage.gatsbyImageData} />
@@ -146,6 +149,7 @@ const Services = ({ data }) => {
           </div>
 
           <div className="services">
+            <span id="demountable-partitioning"></span>
             <div className="service" data-aos="fade-up">
               {demountablePartitioning &&
                 renderRichText(demountablePartitioning, options)}
@@ -167,6 +171,7 @@ const Services = ({ data }) => {
           <Carousel />
 
           <div className="services">
+            <span id="carpentry-bespoke-joinery-cladding"></span>
             <div className="service service-image" data-aos="fade-up">
               <div className="before-image" data-aos="fade-left"></div>
               <GatsbyImage
@@ -182,6 +187,7 @@ const Services = ({ data }) => {
           </div>
 
           <div className="services">
+            <span id="finishing-plastering-tape-and-joint"></span>
             <div className="service" data-aos="fade-up">
               {finishingPlasteringTapeAndJoint &&
                 renderRichText(finishingPlasteringTapeAndJoint, options)}
@@ -195,6 +201,7 @@ const Services = ({ data }) => {
           </div>
 
           <div className="services">
+            <span id="acoustic-solutions"></span>
             <div className="service service-image" data-aos="fade-up">
               <div className="before-image" data-aos="fade-left"></div>
               <GatsbyImage image={acousticSolutionsImage.gatsbyImageData} />
@@ -205,6 +212,7 @@ const Services = ({ data }) => {
           </div>
 
           <div className="services">
+            <span id="hygienic-wall-lining"></span>
             <div className="service" data-aos="fade-up">
               {hygienicWallLining &&
                 renderRichText(hygienicWallLining, options)}

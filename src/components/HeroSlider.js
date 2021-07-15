@@ -10,14 +10,19 @@ const HeroSlider = () => {
         title
         sliderTitle
         slideOne {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100, aspectRatio: 2.33)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            quality: 100
+            aspectRatio: 2.33
+            placeholder: BLURRED
+          )
         }
         slideTwo {
           gatsbyImageData(
             layout: FULL_WIDTH
             quality: 100
             aspectRatio: 2.33
-            jpegProgressive: false
+            placeholder: BLURRED
           )
         }
         slideThree {
@@ -25,7 +30,7 @@ const HeroSlider = () => {
             layout: FULL_WIDTH
             quality: 100
             aspectRatio: 2.33
-            jpegProgressive: false
+            placeholder: BLURRED
           )
         }
         slideFour {
@@ -33,7 +38,7 @@ const HeroSlider = () => {
             layout: FULL_WIDTH
             quality: 100
             aspectRatio: 2.33
-            jpegProgressive: false
+            placeholder: BLURRED
           )
         }
         slideFive {
@@ -41,7 +46,7 @@ const HeroSlider = () => {
             layout: FULL_WIDTH
             quality: 100
             aspectRatio: 2.33
-            jpegProgressive: false
+            placeholder: BLURRED
           )
         }
         slideSix {
@@ -49,7 +54,7 @@ const HeroSlider = () => {
             layout: FULL_WIDTH
             quality: 100
             aspectRatio: 2.33
-            jpegProgressive: false
+            placeholder: DOMINANT_COLOR
           )
         }
       }
