@@ -6,7 +6,7 @@ const TextField = ({ label, ...props }) => {
   return (
     <div className="fields">
       <label htmlFor={field.name}>{label}</label>
-      <input type="hidden" {...field} {...props} />
+      <textarea type="hidden" {...field} {...props} />
 
       <ErrorMessage component="p" name={field.name} />
     </div>

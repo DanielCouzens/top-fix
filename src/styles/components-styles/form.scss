@@ -1,56 +1,95 @@
 .form {
-    margin: 6rem auto;
-    max-width: 1200px;
+  margin: 6rem auto;
+  max-width: 1200px;
 
-    form {
-        width: 500px;
-        margin: 0 auto;
+  form {
+    width: 70%;
+    margin: 0 auto;
+    @include center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .button-wrap {
+      margin-top: 0.9rem;
+      margin-left: 0.9rem;
+      display: flex;
+    }
+
+    button {
+      @include button-small;
+      height: 50px;
+      width: 150px;
+      color: #fff;
+      font-size: 1.8rem;
+    }
+
+    button:nth-child(2) {
+      margin-left: 1.8rem;
+    }
+
+    .contact-details {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 0.9rem;
+
+      .fields {
         @include center;
         flex-direction: column;
-        align-items: space-between;
+        align-items: flex-start;
+        margin: 0.9rem;
+        // height: 150px;
+        position: relative;
 
-
-        .contact-details {
-            width: 500px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 0.9rem;
-
-            .fields {
-                @include center;
-                flex-direction: column;
-                align-items: flex-start;
-                margin: 0.9rem;
-
-                input {
-                    margin: 0.9rem 0;
-                    height: 50px;
-                    width: 100%;
-                    border: 1px solid rgba(0, 0, 0, 0.25);
-                }
-            }
+        p {
+          position: absolute;
+          color: $red3;
+          bottom: -14px;
         }
 
-        .contact-message {
-            width: 500px;
-            margin: 0.9rem;
-
-            .fields {
-                margin: 0.9rem;
-
-                input {
-                    margin: 0.9rem 0;
-                    @include center;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    width: 100%;
-                    height: 500px;
-                    border: 1px solid rgba(0, 0, 0, 0.25);
-                }
-            }
-
-
+        input:focus {
+          outline: 1px solid $red3;
         }
+
+        input {
+          margin: 0.9rem 0;
+          height: 50px;
+          min-height: 50px;
+          width: 100%;
+          border: 1px solid rgba(0, 0, 0, 0.171);
+          @include bx-shadow-light;
+        }
+      }
     }
+
+    .contact-message {
+      width: 100%;
+
+      .fields {
+        margin: 0.9rem;
+        position: relative;
+
+        p {
+          position: absolute;
+          color: $red3;
+          top: 1px;
+          left: 79px;
+        }
+
+        textarea:focus {
+          outline: 1px solid $red3;
+        }
+
+        textarea {
+          margin: 0.9rem 0;
+          width: 100%;
+          height: 500px;
+          border: 1px solid rgba(0, 0, 0, 0.171);
+          @include bx-shadow-light;
+        }
+      }
+    }
+  }
 }

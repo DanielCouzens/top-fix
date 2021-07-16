@@ -19,7 +19,7 @@
     "dotenv": "^8.2.0",
     "env-cmd": "^10.1.0",
     "formik": "^2.2.8",
-    "gatsby": "^3.1.1",
+    "gatsby": "^3.9.1",
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-gatsby-cloud": "^2.1.0",
     "gatsby-plugin-image": "^1.1.2",
