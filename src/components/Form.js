@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, useField } from "formik";
+import { Formik, Form } from "formik";
 import TextField from "../components/TextField";
 import MessageField from "../components/MessageField";
 import * as Yup from "yup";
@@ -34,10 +34,9 @@ const ContactForm = () => {
       validationSchema={validate}>
       {(formik) => (
         <div className="form">
-          {console.log(formik)}
           <Form name="contact" method="post">
             <div className="contact-details">
-              <TextField type="hidden" label="Name" name="name" type="text" />
+              <TextField label="Name" name="name" type="text" />
               <TextField label="Email" name="email" type="email" />
               <TextField label="Company" name="company" type="text" />
               <TextField label="Telephone" name="telephone" type="text" />
