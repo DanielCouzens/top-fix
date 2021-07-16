@@ -24,6 +24,13 @@ export const query = graphql`
       caseStudiesProducts {
         raw
       }
+      caseStudiesMainPhoto {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          aspectRatio: 0.7
+          cropFocus: BOTTOM
+        )
+      }
       caseStudiesSlider {
         gatsbyImageData(
           aspectRatio: 2.53
@@ -41,17 +48,17 @@ export const query = graphql`
         gatsbyImageData(layout: CONSTRAINED)
       }
     }
-    allContentfulCaseStudies {
-      edges {
-        node {
-          caseStudiesTitle
-          id
-          caseStudiesMainPhoto {
-            gatsbyImageData(aspectRatio: 1.5, height: 500, layout: CONSTRAINED)
-          }
-        }
-      }
-    }
+    # allContentfulCaseStudies {
+    #   edges {
+    #     node {
+    #       caseStudiesTitle
+    #       id
+    #       caseStudiesMainPhoto {
+    #         gatsbyImageData(aspectRatio: 1.5, height: 500, layout: CONSTRAINED)
+    #       }
+    #     }
+    #   }
+    # }
   }
 `;
 
@@ -70,6 +77,7 @@ function CaseStudy({ data }) {
   const galleryStyles = galleryState ? "show-gallery" : "hide-gallery";
 
   const {
+    caseStudiesMainPhoto,
     caseStudiesTitle,
     caseStudiesText,
     caseStudiesProducts,
@@ -84,6 +92,17 @@ function CaseStudy({ data }) {
 
   return (
     <Layout>
+      <div className="case-study-mobile-hero">
+        <div className="overlay-mobile"></div>
+        <GatsbyImage
+          image={caseStudiesMainPhoto.gatsbyImageData}
+          className="case-studies-image"
+        />
+
+        <div className="case-study-mobile-title">
+          <h1>{caseStudiesTitle}</h1>
+        </div>
+      </div>
       <div className="case-study-slider-wrap">
         <div className="overlay"></div>
         <Slider {...hero} className="overflow-hidden">
@@ -105,6 +124,9 @@ function CaseStudy({ data }) {
         // data-aos="fade-left"
       >
         <p>{caseStudyDescription && renderRichText(caseStudyDescription)}</p>
+      </div>
+      <div className="bars-wrap-mob">
+        <img src={topFix} height="50" width="50" alt="topfix styling" />
       </div>
       <div className="case-wrap">
         {/* <div className="case-background"></div> */}

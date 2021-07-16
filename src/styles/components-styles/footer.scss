@@ -45,16 +45,31 @@
     }
 
     .footer-elements {
+
+      @media (max-width: 780px) {
+        width: 261px;
+        border-top: 1px solid #363636c2;
+        margin: 1.8rem;
+      }
+
       .footer-nav {
         display: flex;
         flex-direction: column;
 
+        @media (max-width: 780px) {
+          width: 190px;
+          margin: 0 auto;
+        }
 
 
         a {
           color: #fff;
           position: relative;
           margin-left: 1.5rem;
+
+          @media (max-width: 780px) {
+            margin-top: 0.9rem;
+          }
         }
 
         a:before {
@@ -85,6 +100,7 @@
 
         @media (max-width: 780px) {
           margin-top: 1.8rem;
+          margin-bottom: 0.9rem;
         }
       }
 
@@ -93,7 +109,7 @@
 
         @media (max-width: 780px) {
           margin-top: 1.8rem;
-
+          margin-bottom: 0.9rem;
         }
       }
 
