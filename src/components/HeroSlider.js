@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Logo from "../images/Topfix-Logo.png";
 
 const HeroSlider = () => {

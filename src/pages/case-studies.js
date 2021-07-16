@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Layout from "../components/Layout";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";

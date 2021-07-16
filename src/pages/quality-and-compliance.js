@@ -23,11 +23,7 @@ export const pageQuery = graphql`
         raw
       }
       heroImage {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          aspectRatio: 1.4
-          cropFocus: BOTTOM
-        )
+        gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 2.0, cropFocus: TOP)
       }
       title
       badgeOne {

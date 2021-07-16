@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage } from "gatsby-plugin-image";
 

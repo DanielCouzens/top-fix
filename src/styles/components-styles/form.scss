@@ -1,0 +1,56 @@
+.form {
+    margin: 6rem auto;
+    max-width: 1200px;
+
+    form {
+        width: 500px;
+        margin: 0 auto;
+        @include center;
+        flex-direction: column;
+        align-items: space-between;
+
+
+        .contact-details {
+            width: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0.9rem;
+
+            .fields {
+                @include center;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0.9rem;
+
+                input {
+                    margin: 0.9rem 0;
+                    height: 50px;
+                    width: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
+
+        .contact-message {
+            width: 500px;
+            margin: 0.9rem;
+
+            .fields {
+                margin: 0.9rem;
+
+                input {
+                    margin: 0.9rem 0;
+                    @include center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 500px;
+                    border: 1px solid rgba(0, 0, 0, 0.25);
+                }
+            }
+
+
+        }
+    }
+}
