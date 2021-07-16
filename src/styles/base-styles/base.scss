@@ -23,7 +23,7 @@ html {
   height: 90px;
 
   @media (max-width: 992px) {
-    height: 50px;
+    height: 55px;
   }
 
 }
@@ -125,6 +125,17 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin background-curve {
+  width: 100vw;
+  height: 200vh;
+  right: 0;
+  position: absolute;
+  background-image: url(../images/background.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
 }
 
 // Buttons

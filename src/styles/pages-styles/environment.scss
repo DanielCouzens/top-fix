@@ -1,5 +1,7 @@
 .environment-wrap {
-  .background {}
+  .background {
+    @include background-curve;
+  }
 
   .page-wrap {
     .environment-container {

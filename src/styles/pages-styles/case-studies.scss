@@ -74,7 +74,13 @@
 
           @media (max-width: 500px) {
             text-align: center;
-            padding: 3rem;
+            padding: 2rem;
+            font-size: 1.5rem;
+          }
+
+          @media (max-width: 415px) {
+            text-align: center;
+            padding: 0.9rem;
           }
 
           b {
@@ -106,6 +112,7 @@
 
           @media (max-width: 500px) {
             display: none;
+            font-size: 1.5rem;
           }
 
           b {

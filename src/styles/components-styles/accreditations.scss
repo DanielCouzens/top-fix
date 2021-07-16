@@ -28,5 +28,9 @@
             justify-content: center;
 
         }
+
+        @media (max-width: 500px) {
+            margin: 4rem 0 0;
+        }
     }
 }

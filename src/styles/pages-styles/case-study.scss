@@ -1,7 +1,7 @@
 .bars-wrap-mob {
   display: none;
 
-  @media (max-width: 500px) {
+  @media (max-width: 415px) {
     display: block;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
     z-index: 100;
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    left: 5%;
 
     h1 {
       color: $white;
@@ -147,6 +147,10 @@
   }
 }
 
+.background {
+  @include background-curve;
+}
+
 .description {
   padding: 6rem 3rem 0rem;
   margin: 0 auto;
@@ -202,6 +206,10 @@
 
     @media (max-width:500px) {
       width: 90%;
+      padding: 2rem 0 0rem;
+    }
+
+    @media (max-width:415px) {
       padding: 0rem 0 0rem;
     }
 

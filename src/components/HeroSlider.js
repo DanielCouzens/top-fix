@@ -91,7 +91,6 @@ const HeroSlider = () => {
 
   return (
     <div className="hero-wrap">
-      <div className="mobile-hero"></div>
       <div className="hero-slider">
         <div className="hero-slider-overlay"></div>
         <div

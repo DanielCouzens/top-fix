@@ -134,19 +134,9 @@
 
 .wrap {
   position: relative;
-  width: 100%;
+  width: 100vw;
 
   .background {
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: url(../images/background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (max-width: 1500px) {
-      background-size: contain;
-    }
+    @include background-curve;
   }
 }

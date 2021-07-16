@@ -119,6 +119,8 @@ function CaseStudy({ data }) {
         </div>
       </div>
 
+      <div className="background"></div>
+
       <div
         className="description"
         // data-aos="fade-left"
