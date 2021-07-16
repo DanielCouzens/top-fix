@@ -72,6 +72,10 @@
                 grid-template-columns: 1fr 1fr 1fr;
                 margin-left: 21px;
 
+                @media (max-width:415px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
                 li::marker {
                     font-size: 20px;
                     color: $red3;

@@ -62,6 +62,39 @@ const Carousel = () => {
     <div className="carousel">
       <h2>Case Studies</h2>
       <div
+        className="carousel-images-mobile"
+        style={
+          index <= slidesCarousel.length - 0
+            ? {
+                transform: `translateX(${-index * 100}%)`,
+              }
+            : {
+                transform: `translateX(${-index * 0}%)`,
+              }
+        }>
+        {slidesCarousel.map((edge, index) => {
+          return (
+            <Link
+              className="case-study-link-mobile"
+              to={`/case-study/${edge.node.caseStudiesTitle
+                .split(" ")
+                .join("-")
+                .toLowerCase()}`}
+              key={index}>
+              <GatsbyImage
+                image={edge.node.caseStudiesMainPhoto.gatsbyImageData}
+                className="case-studies-image-mobile"
+                alt=""
+              />
+              <div className="case-study-link-button-mobile">
+                <p>View Case</p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      <div
         className="carousel-images"
         style={
           index <= slidesCarousel.length - 3

@@ -27,6 +27,7 @@
     bottom: -15px;
   }
 
+
   .carousel-images {
     width: 960px;
     white-space: nowrap;
@@ -37,7 +38,7 @@
     }
 
     @media (max-width: 700px) {
-      max-width: 250px;
+      display: none;
     }
 
     .case-study-link {
