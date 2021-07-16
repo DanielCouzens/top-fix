@@ -23,7 +23,11 @@ export const pageQuery = graphql`
         raw
       }
       heroImage {
-        gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 2.1, cropFocus: BOTTOM)
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          aspectRatio: 2.1
+          cropFocus: BOTTOM_RIGHT
+        )
       }
       title
       badgeOne {
@@ -64,7 +68,9 @@ const Health = ({ data }) => {
 
   return (
     <Layout>
-      <Hero title={title} image={heroImage.gatsbyImageData} />
+      <div id="hs-hero">
+        <Hero title={title} image={heroImage.gatsbyImageData} />
+      </div>
       <div className="environment-wrap">
         <div className="background"></div>
         <div className="page-wrap" id="sfs">

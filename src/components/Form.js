@@ -35,12 +35,7 @@ const ContactForm = () => {
       {(formik) => (
         <div className="form">
           {console.log(formik)}
-          <Form
-            name="contact"
-            method="post"
-            netlify
-            netlify-honeypot="bot-field"
-            hidden>
+          <Form name="contact" method="post">
             <div className="contact-details">
               <TextField type="hidden" label="Name" name="name" type="text" />
               <TextField label="Email" name="email" type="email" />

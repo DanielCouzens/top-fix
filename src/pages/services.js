@@ -16,7 +16,7 @@ export const pageQuery = graphql`
   query MyQuery {
     contentfulServicesPage {
       heroImage {
-        gatsbyImageData(layout: CONSTRAINED, aspectRatio: 1.4)
+        gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 1.4)
       }
       serviceSfs {
         raw
