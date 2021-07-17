@@ -137,8 +137,17 @@
         a {
           transition: 300ms;
 
+
+
           &:hover {
             color: $red3;
+          }
+        }
+
+
+        @media (max-width: 992px) {
+          a {
+            color: $white;
           }
         }
 

@@ -72,14 +72,14 @@
 }
 
 .case-study-slider-wrap {
-  max-height: calc(35vw);
+  max-height: calc(42vw);
   overflow: hidden;
   position: relative;
   @include bx-shadow;
 
-  @media (max-width:780px) {
-    max-height: calc(39vw);
-  }
+  // @media (max-width:780px) {
+  //   max-height: calc(39vw);
+  // }
 
   @media (max-width: 500px) {
     display: none;

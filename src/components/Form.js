@@ -1,5 +1,5 @@
 import React from "react";
-// import { navigate } from "gatsby-link";
+import { navigate } from "gatsby-link";
 import { Formik, Field } from "formik";
 import validation from "./Validation";
 
@@ -46,7 +46,7 @@ const Forms = () => {
             onSubmit={handleSubmit}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            action="/thanks">
+            action="/thanks/">
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <div className="contact-details">
