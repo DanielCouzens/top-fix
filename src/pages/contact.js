@@ -18,7 +18,7 @@ const contact = () => {
             Fill out the form below and we will contact you within 24 hours.
           </p>
         </div>
-        {/* <Form /> */}
+        <Form />
       </div>
     </Layout>
   );
