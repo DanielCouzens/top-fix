@@ -3,7 +3,7 @@
 
   iframe {
     width: 100vw;
-    max-height: calc(35vw);
+    max-height: calc(42vw);
   }
 
   .contact-text {
@@ -11,6 +11,10 @@
       max-width: 850px;
       text-align: center;
       margin: 50px auto;
+
+      @media (max-width: 500px) {
+        margin: 2rem 0;
+      }
     }
   }
 }

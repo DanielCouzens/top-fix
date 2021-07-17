@@ -130,6 +130,16 @@
 
         .header-email {
           margin-top: 3px;
+
+
+        }
+
+        a {
+          transition: 300ms;
+
+          &:hover {
+            color: $red3;
+          }
         }
 
         display: flex;

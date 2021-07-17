@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage } from "gatsby-plugin-image";
 
@@ -31,13 +31,8 @@ export const pageQuery = graphql`
 `;
 
 const IndexPage = ({ data }) => {
-  const {
-    title,
-    text,
-    workWithUsImage,
-    workWithUsTitle,
-    workWithUs,
-  } = data.contentfulHomePage;
+  const { title, text, workWithUsImage, workWithUsTitle, workWithUs } =
+    data.contentfulHomePage;
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
@@ -54,8 +49,10 @@ const IndexPage = ({ data }) => {
             <div className="welcome">
               <h2 data-aos="fade-up">{title}</h2>
               <p data-aos="fade-up">{text && renderRichText(text)}</p>
-              <div className="button">
-                <p data-aos="fade-left">Learn More</p>
+              <div className="button" data-aos="fade-up">
+                <Link to="/services">
+                  <p>Learn More</p>
+                </Link>
               </div>
             </div>
             <div className="bars-wrap" data-aos="fade-left">
@@ -85,8 +82,10 @@ const IndexPage = ({ data }) => {
             <div className="work-with-us">
               <h2 data-aos="fade-up">{workWithUsTitle}</h2>
               <p data-aos="fade-up">{workWithUs}</p>
-              <div className="button">
-                <p data-aos="fade-left">Learn More</p>
+              <div className="button" data-aos="fade-left">
+                <Link to="/services">
+                  <p>Learn More</p>
+                </Link>
               </div>
             </div>
           </section>

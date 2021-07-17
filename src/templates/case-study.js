@@ -15,7 +15,7 @@ import Aos from "aos";
 import "../../node_modules/aos/dist/aos.css";
 
 export const query = graphql`
-  query($caseStudiesTitle: String!) {
+  query ($caseStudiesTitle: String!) {
     contentfulCaseStudies(caseStudiesTitle: { eq: $caseStudiesTitle }) {
       caseStudiesTitle
       caseStudiesText {
@@ -150,10 +150,11 @@ function CaseStudy({ data }) {
 
             <div className="case-study-information-wrap">
               <button
+                data-aos="fade-left"
                 className="button"
                 onClick={() => setCaseState(!caseState)}
                 onKeyDown={() => setCaseState(!caseState)}>
-                <p data-aos="fade-left">Products Used</p>
+                <p>Products Used</p>
               </button>
 
               <div className={styles}>
@@ -172,6 +173,7 @@ function CaseStudy({ data }) {
               </div>
 
               <button
+                data-aos="fade-left"
                 className="button"
                 onClick={() => setGalleryState(!galleryState)}
                 onKeyDown={() => setGalleryState(!galleryState)}>

@@ -44,7 +44,9 @@ const Header = () => {
               height="30"
               alt="topfix logo"
             />
-            <p>info@topfix-interiors.co.uk</p>
+            <a href="mailto:info@topfix-interiors.co.uk">
+              info@topfix-interiors.co.uk
+            </a>
           </div>
           <div className="header-contact telephone">
             <img
@@ -54,10 +56,12 @@ const Header = () => {
               height="30"
               alt="topfix logo"
             />
-            <p>01179 351 217</p>
+            <a href="tel:01179 351 217">01179 351 217</a>
           </div>
           <div className="header-contact linked-in">
-            <a href="https://www.linkedin.com/company/topfix-interiors-ltd/">
+            <a
+              href="https://www.linkedin.com/company/topfix-interiors-ltd/"
+              target="_blank">
               <img
                 className="header-linked"
                 src={Linked}

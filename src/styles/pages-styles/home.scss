@@ -121,13 +121,17 @@
       }
 
       .button {
-        margin-top: 3rem;
-        @include button-small;
 
-        // &:hover {
-        //   @include button-hover;
-        // }
+        a {
+          margin-top: 3rem;
+          @include button-small;
+
+          // &:hover {
+          //   @include button-hover;
+          // }
+        }
       }
+
     }
   }
 }

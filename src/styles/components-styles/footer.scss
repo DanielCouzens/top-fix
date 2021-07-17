@@ -137,8 +137,13 @@
             margin-top: 3px;
           }
 
-          p {
+          a {
             color: $white;
+            transition: 300ms;
+
+            &:hover {
+              color: $red3;
+            }
           }
 
           display: flex;

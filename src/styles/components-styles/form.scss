@@ -1,5 +1,9 @@
 .contact-form {
   margin-bottom: 6rem;
+
+  @media (max-width: 500px) {
+    margin-bottom: 2rem;
+  }
 }
 
 form {
@@ -9,6 +13,10 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 
 
 
@@ -24,10 +32,16 @@ form {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-gap: 0.9rem;
 
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+
+
     .fields {
+      width: 100%;
+
       label {
         position: relative;
       }

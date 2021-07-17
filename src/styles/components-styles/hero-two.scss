@@ -2,6 +2,7 @@
   .hero-container {
     .gatsby-image-wrapper {
       bottom: 60px;
+
       @media (max-width: 1090px) {
         bottom: 40px;
       }
@@ -18,25 +19,6 @@
   overflow: hidden;
   position: relative;
   @include bx-shadow;
-
-  // .gatsby-image-wrapper {
-  //   bottom: 60px;
-  //   @media (max-width: 1090px) {
-  //     bottom: 40px;
-  //   }
-
-  //   @media (max-width: 780px) {
-  //     bottom: 20px;
-  //   }
-  // }
-
-  // @media (max-width: 780px) {
-  //   // max-height: calc(50vw);
-  // }
-
-  // @media (max-width: 500px) {
-  //   // max-height: calc(30vh);
-  // }
 
   h1 {
     position: absolute;
