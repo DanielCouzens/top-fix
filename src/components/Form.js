@@ -31,10 +31,16 @@ const ContactForm = () => {
         email: "",
         message: "",
       }}
-      validationSchema={validate}>
+      validationSchema={validate}
+      onSubmit>
       {(formik) => (
         <div className="form">
-          <Form name="contact" method="post">
+          <Form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="contact-details">
               <TextField label="Name" name="name" type="text" />
               <TextField label="Email" name="email" type="email" />
