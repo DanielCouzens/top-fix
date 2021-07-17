@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby-link";
 import { Formik, Form } from "formik";
 import TextField from "../components/TextField";
 import MessageField from "../components/MessageField";
@@ -23,6 +24,23 @@ const ContactForm = () => {
       .required("Your message is required"),
   });
 
+  // const [state, setState] = React.useState({})
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        // ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch((error) => alert(error));
+  };
+
   return (
     <Formik
       initialValues={{
@@ -39,7 +57,8 @@ const ContactForm = () => {
             name="contact"
             method="post"
             data-netlify="true"
-            data-netlify-honeypot="bot-field">
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <div className="contact-details">
               <TextField label="Name" name="name" type="text" />
@@ -52,7 +71,7 @@ const ContactForm = () => {
             </div>
             <div className="button-wrap">
               <button type="submit">Submit</button>
-              <button type="reset">Reset</button>
+              {/* <button type="reset">Reset</button> */}
             </div>
           </Form>
         </div>
