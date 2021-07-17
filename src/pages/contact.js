@@ -13,7 +13,7 @@ const contact = () => {
           height="600"
           allowFullScreen=""
           loading="lazy"></iframe>
-        <div className="contact-form">
+        <div className="contact-text">
           <p>
             Fill out the form below and we will contact you within 24 hours.
           </p>
