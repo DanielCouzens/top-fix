@@ -1,0 +1,46 @@
+.policy-wrap {
+    margin: 2rem;
+
+    .page-wrap {
+        .privacy-title-wrap {
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin: 2rem 0;
+
+            span {
+                font-size: 1.8rem;
+                font-weight: 600;
+
+                @media (max-width: 500px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            a {
+                color: $red3;
+                margin-left: 5px;
+            }
+        }
+
+        ul {
+            li {
+                margin-left: 4rem;
+                font-size: 1.8rem;
+
+                @media (max-width: 500px) {
+                    margin-left: 2rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .privacy-address {
+            margin-top: 1rem;
+        }
+
+
+
+    }
+}

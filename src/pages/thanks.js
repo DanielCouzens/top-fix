@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const thanks = () => {
+const Thanks = () => {
   return (
     <Layout>
       <div className="thanks-wrap">
@@ -21,4 +21,4 @@ const thanks = () => {
   );
 };
 
-export default thanks;
+export default Thanks;

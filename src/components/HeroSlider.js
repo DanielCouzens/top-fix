@@ -130,7 +130,7 @@ const HeroSlider = () => {
 
         <div className="hero-title-logo">
           <img src={Logo} width="70" height="70" alt="topfix logo" />
-          <h2>Top Fix Interiors</h2>
+          <h2>Topfix Interiors</h2>
         </div>
 
         <div className="hero-title">

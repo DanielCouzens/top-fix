@@ -1,10 +1,6 @@
 .cases-studies-gallery-container {
   margin: 1.8rem;
 
-  @media (max-width: 780px) {
-    margin: 1rem;
-  }
-
   .case-studies-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -18,6 +14,10 @@
     @media (max-width: 780px) {
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
+    }
+
+    @media (max-width: 450px) {
+      grid-template-columns: 1fr;
     }
 
     .case-study-link {
@@ -38,7 +38,9 @@
       }
 
       .case-studies-info {
+        padding: 8rem 4rem;
         @include center;
+        align-items: flex-start;
         position: absolute;
         z-index: 10;
         height: 100%;
@@ -50,38 +52,19 @@
 
         @media (max-width: 500px) {
           transform: translateX(0px);
-          background-color: #2f2f2f00;
-          background-image: linear-gradient(#2f2f2f8a, #2f2f2f2c);
           opacity: 1;
+          padding: 4rem 1rem;
         }
       }
 
       .case-info-wrap {
-        h2:first-child {
-          font-weight: 100;
-        }
+        max-width: 250px;
 
         h2 {
           color: $white;
           padding: 1rem;
           font-size: 2rem;
           font-weight: 100;
-
-          @media (max-width: 1150px) {
-            padding: 0.3rem;
-            font-size: 1.8rem;
-          }
-
-          @media (max-width: 500px) {
-            text-align: center;
-            padding: 2rem;
-            font-size: 1.5rem;
-          }
-
-          @media (max-width: 415px) {
-            text-align: center;
-            padding: 0.9rem;
-          }
 
           b {
             color: inherit;
@@ -93,55 +76,14 @@
           height: 1px;
           background-color: $red3;
           width: 80%;
-          margin-left: 1rem;
-
-          @media (max-width: 500px) {
-            margin: 0 auto;
-          }
         }
 
         h3 {
-          color: $white;
-          padding: 1rem;
-          font-weight: 100;
-
-          @media (max-width: 1150px) {
-            padding: 0.3rem;
-            font-size: 1.8rem;
-          }
-
-          @media (max-width: 500px) {
-            display: none;
-            font-size: 1.5rem;
-          }
-
-          b {
-            color: inherit;
-            font-weight: 100;
-          }
+          display: none;
         }
 
         ul {
-          padding-top: 1.8rem;
-          padding-left: 3.1rem;
-
-          @media (max-width: 1150px) {
-            padding: 0.3rem;
-          }
-
-          @media (max-width: 500px) {
-            display: none;
-          }
-
-          li {
-            @media (max-width: 1150px) {
-              margin-left: 2.8rem;
-            }
-
-            p {
-              color: $white;
-            }
-          }
+          display: none;
 
           li::marker {
             font-size: 10px;

@@ -1,5 +1,4 @@
 import React from "react";
-import { navigate } from "gatsby-link";
 import { Formik, Field } from "formik";
 import validation from "./Validation";
 

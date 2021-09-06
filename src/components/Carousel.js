@@ -129,7 +129,12 @@ const Carousel = () => {
       <div className="carousel-dots">
         {dots.map((_, idx) => (
           <div
+            role="button"
+            aria-label="select picture"
             onClick={() => {
+              setIndex(idx);
+            }}
+            onKeyDown={() => {
               setIndex(idx);
             }}
             key={idx}

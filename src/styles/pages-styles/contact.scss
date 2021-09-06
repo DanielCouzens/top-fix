@@ -2,13 +2,117 @@
   margin-top: -3px;
   overflow: hidden;
 
+  .map-wrap {
+    position: relative;
+
+    @media (max-width: 762px) {
+      margin-top: 5.5rem;
+    }
+
+    .contact-details {
+      padding: 2rem;
+      margin: 10px;
+      width: 355px;
+      background-color: $white;
+      top: 0;
+      position: absolute;
+      @include bx-shadow;
+
+      @media (max-width: 992px) {
+        width: 310px;
+      }
+
+      @media (max-width: 762px) {
+        position: relative;
+        margin: 5rem auto 0;
+        width: 288px;
+      }
+
+      h1 {
+        text-align: right;
+        margin-bottom: 4rem;
+        font-size: 3rem;
+
+        @media (max-width: 762px) {
+          text-align: left;
+        }
+
+        &::after {
+          bottom: -15px;
+          right: 0;
+          @include red-line;
+
+          @media (max-width: 762px) {
+            right: calc(100% - 30px);
+          }
+        }
+      }
+
+      .contact-address {
+        position: relative;
+        width: 100%;
+
+        h2 {
+          font-size: 1.8rem;
+
+
+        }
+
+        .contact-logo {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .contact-links-wrap {
+        margin-top: 10px;
+        position: relative;
+
+        .contact-tel,
+        .contact-email {
+          @include center;
+          justify-content: flex-start;
+          padding: 5px;
+
+          img {
+            margin-right: 10px;
+            height: 22px;
+            width: 22px;
+          }
+        }
+
+        .contact-linked-in {
+          position: absolute;
+          right: 10px;
+          top: 0px;
+          background-color: $red3;
+          height: 22px;
+          width: 22px;
+          border-radius: 50%;
+          @include center;
+
+          img {
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+
   iframe {
     width: 100vw;
     max-height: calc(42vw);
+    border: none !important;
+
+    .gm-style {
+      display: none !important;
+    }
   }
 
   .contact-text {
     p {
+      padding: 0 2rem;
       max-width: 850px;
       text-align: center;
       margin: 50px auto;

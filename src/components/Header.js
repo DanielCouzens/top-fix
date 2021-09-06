@@ -61,7 +61,8 @@ const Header = () => {
           <div className="header-contact linked-in">
             <a
               href="https://www.linkedin.com/company/topfix-interiors-ltd/"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               <img
                 className="header-linked"
                 src={Linked}

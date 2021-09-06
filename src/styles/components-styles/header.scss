@@ -82,7 +82,7 @@
     @media (max-width: 992px) {
       z-index: 110;
       padding: 1.8rem;
-      top: 50px;
+      top: 55px;
       right: 0;
       position: absolute;
       @include bx-shadow;
@@ -130,14 +130,10 @@
 
         .header-email {
           margin-top: 3px;
-
-
         }
 
         a {
           transition: 300ms;
-
-
 
           &:hover {
             color: $red3;
@@ -158,10 +154,19 @@
 
       .linked-in {
         @include center;
+        background-color: $red3;
+        border-radius: 50%;
+        height: 22px;
+        width: 22px;
+        margin-left: 5px;
 
         img {
+          width: 12px;
           margin-top: 2px;
+        }
 
+        @media (max-width: 992px) {
+          margin-top: 5px;
         }
       }
     }
@@ -198,3 +203,77 @@
     }
   }
 }
+
+// .header {
+//   z-index: 100;
+//   background-color: $white;
+//   width: 100vw;
+//   height: 90px;
+//   display: flex;
+//   justify-content: flex-end;
+//   position: fixed;
+//   @include bx-shadow;
+
+//   .header-logo {
+//     background-color: $white;
+//     left: 40px;
+//     top: 40px;
+//     position: absolute;
+//     padding: 1rem;
+//     @include bx-shadow;
+
+//     img {
+//       width: 100px;
+//       height: 100px;
+//     }
+//   }
+
+//   .header-contact-nav-wrap {
+//     margin-right: 20px;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: flex-end;
+
+//     .header-contact-details {
+//       display: flex;
+//       align-items: center;
+
+//       .header-contact {
+//         img {
+//           margin: 0 5px;
+//           width: 20px;
+//         }
+
+//         .header-email {
+//           margin-top: 3px;
+//         }
+
+//         display: flex;
+//         align-items: center;
+//       }
+
+//       .linked-in {
+//         margin: 0 5px;
+//         background-color: $red3;
+//         width: 20px;
+//         height: 20px;
+//         border-radius: 100%;
+//         @include center;
+
+//         img {
+//           margin-top: 2px;
+//           width: 11px;
+//         }
+//       }
+//     }
+
+//     .header-nav {
+//       ul {
+//         a {
+//           margin: 0.5rem 0.8rem;
+//         }
+//       }
+//     }
+//   }
+// }

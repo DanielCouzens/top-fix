@@ -74,6 +74,7 @@ const Footer = () => {
           <p>Unit 10</p>
           <p>Circuit 32</p>
           <p>Easton Rd</p>
+          <p>Bristol</p>
           <p>BS5 0DB</p>
         </div>
         <div className="footer-elements">
@@ -104,7 +105,8 @@ const Footer = () => {
             <div className="footer-contact footer-linked-in">
               <a
                 href="https://www.linkedin.com/company/topfix-interiors-ltd/"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 <img
                   className="footer-linked"
                   src={Linked}
@@ -122,10 +124,14 @@ const Footer = () => {
       </div>
 
       <div className="bottom-footer">
-        <a className="web-design" href="https://www.netfrontier.co.uk/">
+        <a
+          className="web-design"
+          href="https://www.netfrontier.co.uk/"
+          target="_blank"
+          rel="noreferrer">
           Web Design by <span>Net Frontier</span>
         </a>
-        <Link to="/">Policy</Link>
+        <Link to="/privacy-policy">Privacy Policy</Link>
       </div>
     </div>
   );
