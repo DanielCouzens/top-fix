@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Hero from "../components/HeroTwo";
 import Carousel from "../components/Carousel";
+import Seo from "../components/Seo";
 
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -68,6 +69,10 @@ const Health = ({ data }) => {
 
   return (
     <Layout>
+      <Seo
+        title="Health & Safety"
+        description="In addition to being members of several recognised and highly regarded independent schemes, Topfix Interiors have also designed and implemented their own Health and Safety scheme - S.A.F.E, Safety Awareness for Everyone."
+      />
       <div id="hs-hero">
         <Hero title={title} image={heroImage.gatsbyImageData} />
       </div>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Hero from "../components/HeroTwo";
 import Carousel from "../components/Carousel";
+import Seo from "../components/Seo";
 
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -38,13 +39,8 @@ const Environmental = ({ data }) => {
   const styles = textState ? "show-text" : "hide-text";
   const read = textState ? "Read Less" : "Read More";
 
-  const {
-    heroImage,
-    title,
-    textOne,
-    textTwo,
-    badge,
-  } = data.contentfulEnvironmentalPage;
+  const { heroImage, title, textOne, textTwo, badge } =
+    data.contentfulEnvironmentalPage;
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
@@ -52,6 +48,10 @@ const Environmental = ({ data }) => {
 
   return (
     <Layout>
+      <Seo
+        title="Environmental"
+        description="Topfix Interiors have successfully held and maintained our environmental management system, phase 3 of BS 8555 through the Seren Scheme since 2012, we always endeavour to not only be compliant but also to be ahead of the game ensuring that all of the main contractors we work with can do so in confidence that we meet all of their requirements."
+      />
       <Hero title={title} image={heroImage.gatsbyImageData} />
       <div className="environment-wrap">
         <div className="background"></div>

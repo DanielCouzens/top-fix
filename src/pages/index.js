@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { graphql, Link } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage } from "gatsby-plugin-image";
+import Seo from "../components/Seo";
 
 import topFix from "../images/top-fix.svg";
 
@@ -31,6 +32,31 @@ export const pageQuery = graphql`
 `;
 
 const IndexPage = ({ data }) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Topfix Interiors Ltd",
+    image: "../images/icon.png",
+    "@id": "",
+    url: "https://www.topfix-interiors.co.uk/",
+    telephone: "01179 351 217",
+    description:
+      "Topfix Interiors are an established interior fit out company based in Bristol, we deliver top class interior solutions to all sectors of the construction industry; education, leisure, hotels, offices, custodial, health and retail across England and Wales.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Unit 10, Circuit 32 Easton Rd",
+      addressLocality: "Bristol",
+      postalCode: "BS5 0DB",
+      addressCountry: "GB",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "17:00",
+    },
+  };
+
   const { title, text, workWithUsImage, workWithUsTitle, workWithUs } =
     data.contentfulHomePage;
 
@@ -40,6 +66,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title="Topfix Interiors" schemaMarkup={schema} />
       <Hero />
       <PageNav />
       <div className="wrap">

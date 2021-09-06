@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Hero from "../components/HeroTwo";
 import Carousel from "../components/Carousel";
+import Seo from "../components/Seo";
 
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -41,14 +42,8 @@ const Quality = ({ data }) => {
   const styles = textState ? "show-text" : "hide-text";
   const read = textState ? "Read Less" : "Read More";
 
-  const {
-    heroImage,
-    title,
-    textOne,
-    textTwo,
-    badgeOne,
-    badgeTwo,
-  } = data.contentfulQualityAndCompliancePage;
+  const { heroImage, title, textOne, textTwo, badgeOne, badgeTwo } =
+    data.contentfulQualityAndCompliancePage;
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
@@ -56,6 +51,10 @@ const Quality = ({ data }) => {
 
   return (
     <Layout>
+      <Seo
+        title="Quality & Compliance"
+        description="Topfix Interiors have implemented a site-based system to ensure not only are Topfix Interiors compliant but to ensure we exceed all expectations. Through the effective running of this system, our aim is to get the project completed on time, on price with no extras."
+      />
       <Hero title={title} image={heroImage.gatsbyImageData} />
       <div className="environment-wrap">
         <div className="background"></div>

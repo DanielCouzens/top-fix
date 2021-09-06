@@ -4,9 +4,29 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "topfix",
+    title: "Topfix Interiors Ltd",
     siteUrl: "https://www.topfix-interiors.co.uk/",
-    author: "Net Frontier",
+    author: {
+      name: "Net Frontier",
+      minibio: `
+      We are a web design company that creates fast, gorgeous, secure, user-friendly websites, designed to be future proof and optimised for the real world.
+      `,
+    },
+    titleTemplate: "%s Expert Interior Solutions",
+    description:
+      "Topfix Interiors are an established interior fit out company based in Bristol, we deliver top class interior solutions to all sectors of the construction industry; education, leisure, hotels, offices, custodial, health and retail across England and Wales.",
+    siteUrl: "http://www.topfix-interiors.co.uk/",
+    url: "http://www.topfix-interiors.co.uk/",
+    // No trailing slash allowed!
+    defaultImage: "/src/images/Topfix-Default.jpg",
+    image: "/src/images/Topfix-Default.jpg",
+    logo: "/src/images/icon.png",
+
+    organization: {
+      name: "Topfix Interiors Ltd",
+      url: "http://www.topfix-interiors.co.uk/services",
+      logo: "./images/icon.png",
+    },
   },
   plugins: [
     {

@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 import Form from "../components/Form";
 import Email from "../images/icons/email.svg";
 import Phone from "../images/icons/phone-call.svg";
@@ -9,6 +10,7 @@ import Logo from "../images/Topfix-Logo.png";
 const contact = () => {
   return (
     <Layout>
+      <Seo title="Contact Us" />
       <div className="contact-page-wrap">
         <div className="map-wrap">
           <iframe

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as propTypes from "prop-types";
 import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { graphql } from "gatsby";
 import topFix from "../images/top-fix.svg";
@@ -48,17 +49,6 @@ export const query = graphql`
         gatsbyImageData(layout: CONSTRAINED)
       }
     }
-    # allContentfulCaseStudies {
-    #   edges {
-    #     node {
-    #       caseStudiesTitle
-    #       id
-    #       caseStudiesMainPhoto {
-    #         gatsbyImageData(aspectRatio: 1.5, height: 500, layout: CONSTRAINED)
-    #       }
-    #     }
-    #   }
-    # }
   }
 `;
 
@@ -92,6 +82,7 @@ function CaseStudy({ data }) {
 
   return (
     <Layout>
+      <Seo title={caseStudiesTitle} />
       <div className="case-study-mobile-hero">
         <div className="overlay-mobile"></div>
         <GatsbyImage

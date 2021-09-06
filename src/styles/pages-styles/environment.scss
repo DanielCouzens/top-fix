@@ -114,6 +114,7 @@
       .bars-wrap {
         z-index: 1;
         margin-top: 25px;
+        width: 150px;
 
         @media (max-width: 780px) {
           display: none;
